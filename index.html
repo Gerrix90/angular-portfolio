@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html ng-app='portfolioApp'></html>
+<head lang='en' ng-app='portfolio'>
+  <meta charset='UTF-8'>
+  <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+  <meta content='user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1' name='viewport'>
+  <meta content='yes' name='apple-mobile-web-app-capable'>
+  <base href='/'>
+  <!-- Latest compiled and minified CSS -->
+  <link href='bower_components/bootstrap/dist/css/bootstrap.min.css' rel='stylesheet'>
+  <link href='styles/font-awesome.min.css' rel='stylesheet'>
+  <link href='styles/fonts.css' rel='stylesheet'>
+  <link href='styles/style.css' rel='stylesheet'>
+  <link href='styles/animate.css' rel='stylesheet'>
+  <script src='bower_components/angular/angular.min.js' type='text/javascript'></script>
+  <script src='bower_components/angular-route/angular-route.min.js' type='text/javascript'></script>
+  <script src='bower_components/angular-animate/angular-animate.min.js' type='text/javascript'></script>
+  <script src='js/ui-bootstrap-tpls-0.12.0.js' type='text/javascript'></script>
+  <script src='bower_components/jquery.easy-pie-chart/dist/angular.easypiechart.min.js' type='text/javascript'></script>
+  <script src='js/main.js' type='text/javascript'></script>
+  <title>Shalom Sam's Portfolio</title>
+</head>
+<body class='{{ pageClass }}' ng-controller='MasterController'>
+  <!-- /.appWrap{:class => "{{pageClass}}"} -->
+  <header class='header-wrap' ng-controller='HeaderController'>
+    <div class='contentWrp'>
+      <div class='container nav-wrap navbar-custom navbar-static-top'>
+        <div class='navbar-header'>
+          <a class='navbar-brand'></a>
+          <button class='navbar-toggle' ng-click='isCollapsed = !isCollapsed'>
+            <span class='sr-only'>Toggle navigation</span>
+            <span class='icon-bar'></span>
+            <span class='icon-bar'></span>
+            <span class='icon-bar'></span>
+          </button>
+        </div>
+      </div>
+      <div class='container'>
+        <div class='row dpWrapper text-center' ng-class="{ 'animated fadeIn' : animateImg }">
+          <img class='img-responsive center-block' ng-class="{ 'animated bounceInDown' : animateImg }" src='/images/login-avatar.png'>
+        </div>
+        <div class='row introMsgWrp'>
+          <div class='col-md-2 col-xs-2 text-center visible-md visible-lg'>
+            <a href='http://www.facebook.com/shalom.sam' ng-class="{ 'animated fadeInLeft' : animateImg }">
+              <i class='fa fa-facebook'></i>
+            </a>
+          </div>
+          <div class='col-md-2 col-xs-2 text-center visible-md visible-lg'>
+            <a href='http://www.twitter.com/Shalom_Sam' ng-class="{ 'animated fadeInLeft' : animateImg }">
+              <i class='fa fa-twitter'></i>
+            </a>
+          </div>
+          <div class='col-md-4 col-xs-12 text-center fname' ng-class="{ 'animated fadeInUp' : animateImg }">
+            <span>Shalom Sam</span>
+          </div>
+          <div class='col-md-2 col-xs-2 text-center visible-md visible-lg'>
+            <a href='http://www.linkedin.com/shalomsam' ng-class="{ 'animated fadeInRight' : animateImg }">
+              <i class='fa fa-linkedin'></i>
+            </a>
+          </div>
+          <div class='col-md-2 col-xs-2 text-center visible-md visible-lg'>
+            <a href='http://www.angellist.com' ng-class="{ 'animated fadeInRight' : animateImg }">
+              <i class='fa fa-angellist'></i>
+            </a>
+          </div>
+        </div>
+        <div class='row socialWrp-xs visible-xs'>
+          <div class='col-xs-12'></div>
+        </div>
+      </div>
+      <div class='container-fluid navbar navbar-custom navbar-fixed-bottom navbar-inverse nav-wrap bottom'>
+        <div class='navbar-header'>
+          <a class='navbar-brand hidden'>Shalom Sam</a>
+          <button class='navbar-toggle' ng-click='isCollapsed2 = !isCollapsed2'>
+            <span class='sr-only'>Toggle navigation</span>
+            <span class='icon-bar'></span>
+            <span class='icon-bar'></span>
+            <span class='icon-bar'></span>
+          </button>
+        </div>
+        <nav class='navbar-collapse collapse' collapse='isCollapsed2'>
+          <ul class='nav navbar-nav nav-main'>
+            <li ng-class="{ active: isActive('/') }">
+              <a href='/'>HOME</a>
+            </li>
+            <li ng-class="{ active: isActive('/about') }">
+              <a href='/about'>ABOUT</a>
+            </li>
+            <li ng-class="{ active: isActive('/portfolio') }">
+              <a href='/portfolio'>PORTFOLIO</a>
+            </li>
+            <li ng-class="{ active: isActive('/contact') }">
+              <a href='/contact'>CONTACT</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <div class='view-animate-container'>
+    <div class='section-box view-animate' ng-view=''></div>
+  </div>
+</body>

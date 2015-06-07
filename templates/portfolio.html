@@ -1,0 +1,160 @@
+<div class='container page portfolio-page'>
+  <h1 class='text-center' ng-class="{ 'animated fadeInDown' : animateTitle }">PORTFOLIO</h1>
+  <div class='h6 text-center subtitle'>Some of my recent work</div>
+  <div class='portfolioWrp'>
+    <div class='row'>
+      <div class='col-xs-12 col-sm-4'>
+        <a class='box' href='/portfolio/being-desi'>
+          <div class='logoWrp'>
+            <div class='brandLogo being-desi'></div>
+          </div>
+          <div class='title'>
+            <p>Being.desi</p>
+          </div>
+        </a>
+      </div>
+      <div class='col-xs-12 col-sm-4'>
+        <a class='box' href='/portfolio/hostgator'>
+          <div class='logoWrp'>
+            <div class='brandLogo hostgator'></div>
+          </div>
+          <div class='title'>
+            <p>Hostgator</p>
+          </div>
+        </a>
+      </div>
+      <div class='col-xs-12 col-sm-4'>
+        <a class='box' href='/portfolio/bluehost'>
+          <div class='logoWrp'>
+            <div class='brandLogo bluehost'></div>
+          </div>
+          <div class='title'>
+            <p>Bluehost</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class='row'>
+      <div class='col-xs-12 col-sm-4'>
+        <a class='box' href='/portfolio/bigrock'>
+          <div class='logoWrp'>
+            <div class='brandLogo bigrock'></div>
+          </div>
+          <div class='title'>
+            <p>BigRock</p>
+          </div>
+        </a>
+      </div>
+      <div class='col-xs-12 col-sm-4'>
+        <a class='box' href='/portfolio/gibo'>
+          <div class='logoWrp'>
+            <div class='brandLogo gibo'></div>
+          </div>
+          <div class='title'>
+            <p>Gibo</p>
+          </div>
+        </a>
+      </div>
+      <div class='col-xs-12 col-sm-4'>
+        <a class='box' href='/portfolio/gafbo'>
+          <div class='logoWrp'>
+            <div class='brandLogo gafbo'></div>
+          </div>
+          <div class='title'>
+            <p>Gafbo</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class='row'>
+      <div class='col-xs-12 col-sm-4'>
+        <a class='box' href='/portfolio/rod'>
+          <div class='logoWrp'>
+            <div class='brandLogo rod'></div>
+          </div>
+          <div class='title'>
+            <p>Rock Stars Of Design</p>
+          </div>
+        </a>
+      </div>
+      <div class='col-xs-12 col-sm-4'>
+        <a class='box' href='/portfolio/httpx'>
+          <div class='logoWrp'>
+            <div class='brandLogo httpx'></div>
+          </div>
+          <div class='title'>
+            <p>HttpX</p>
+          </div>
+        </a>
+      </div>
+      <div class='col-xs-12 col-sm-4'>
+        <a class='box' href='/portfolio/word-up'>
+          <div class='logoWrp'>
+            <div class='brandLogo word-up'></div>
+          </div>
+          <div class='title'>
+            <p>Word-up</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class='row'>
+      <div class='col-xs-12 col-sm-4'>
+        <a class='box' href='/portfolio/bluehost-blog'>
+          <div class='logoWrp'>
+            <div class='brandLogo bluehost-blog'></div>
+          </div>
+          <div class='title'>
+            <p>Bluehost blog</p>
+          </div>
+        </a>
+      </div>
+      <div class='col-xs-12 col-sm-4'>
+        <a class='box' href='/portfolio/bigrock-blog'>
+          <div class='logoWrp'>
+            <div class='brandLogo bigrock-blog'></div>
+          </div>
+          <div class='title'>
+            <p>Bigrock blog</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class='switchWrp' ng-class='{active: animateSubPage}' ng-switch='' on='subPage'>
+  <div class='case' ng-switch-when='being-desi'>
+    <ng-include class='template' src="'templates/partials/being-desi.html'"></ng-include>
+  </div>
+  <div class='case' ng-switch-when='hostgator'>
+    <ng-include class='template' src="'templates/partials/hostgator.html'"></ng-include>
+  </div>
+  <div class='case' ng-switch-when='bluehost'>
+    <ng-include class='template' src="'templates/partials/bluehost.html'"></ng-include>
+  </div>
+  <div class='case' ng-switch-when='bigrock'>
+    <ng-include class='template' src="'templates/partials/bigrock.html'"></ng-include>
+  </div>
+  <div class='case' ng-switch-when='gibo'>
+    <ng-include class='template' src="'templates/partials/gibo.html'"></ng-include>
+  </div>
+  <div class='case' ng-switch-when='gafbo'>
+    <ng-include class='template' src="'templates/partials/gafbo.html'"></ng-include>
+  </div>
+  <div class='case' ng-switch-when='rod'>
+    <ng-include class='template' src="'templates/partials/rod.html'"></ng-include>
+  </div>
+  <div class='case' ng-switch-when='httpx'>
+    <ng-include class='template' src="'templates/partials/httpx.html'"></ng-include>
+  </div>
+  <div class='case' ng-switch-when='word-up'>
+    <ng-include class='template' src="'templates/partials/word-up.html'"></ng-include>
+  </div>
+  <div class='case' ng-switch-when='bigrock-blog'>
+    <ng-include class='template' src="'templates/partials/bigrock-blog.html'"></ng-include>
+  </div>
+  <div class='case' ng-switch-when='bluehost-blog'>
+    <ng-include class='template' src="'templates/partials/bluehost-blog.html'"></ng-include>
+  </div>
+  <div class='case' ng-switch-default=''></div>
+</div>

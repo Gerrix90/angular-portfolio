@@ -1,0 +1,87 @@
+// Variables
+$bgColor: #dddddd;
+$boxBorder: #c3cad3;
+
+// mixins
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin transition($prop) {
+  -webkit-transition: unquote($prop);
+  -moz-transition: unquote($prop);
+  /*noinspection CssUnknownProperty*/
+  -ms-transition: unquote($prop);
+  -o-transition: unquote($prop);
+  transition: unquote($prop);
+}
+
+@mixin opacity($val) {
+  -ms-opacity: $val;
+  filter: opacity($val * 100);
+  opacity: $val;
+}
+
+@mixin keyframe ($animation_name) {
+
+  @-webkit-keyframes $animation_name {
+    @content;
+  }
+
+  @-moz-keyframes $animation_name {
+    @content;
+  }
+
+  @-o-keyframes $animation_name {
+    @content;
+  }
+
+  @keyframes $animation_name {
+    @content;
+  }
+}
+
+@mixin animate ($name) {
+  -webkit-animation-name: $name;
+  animation-name: $name;
+}
+
+@mixin animation ($delay, $duration, $animation:"", $timingFunction:"ease", $fillMode:"forwards", $iterationCount:"initial") {
+  -webkit-animation-delay: $delay;
+  -webkit-animation-duration: $duration;
+  -webkit-animation-timing-function: unquote($timingFunction);
+  -webkit-animation-name: unquote($animation);
+  -webkit-animation-iteration-count: unquote($iterationCount);
+  -webkit-animation-fill-mode: unquote($fillMode); /* this prevents the animation from restarting! */
+
+  -moz-animation-delay: $delay;
+  -moz-animation-duration: $duration;
+  -moz-animation-timing-function: unquote($timingFunction);
+  -moz-animation-name: unquote($animation);
+  -moz-animation-iteration-count: unquote($iterationCount);
+  -moz-animation-fill-mode: unquote($fillMode); /* this prevents the animation from restarting! */
+
+  -o-animation-delay: $delay;
+  -o-animation-duration: $duration;
+  -o-animation-timing-function: unquote($timingFunction);
+  -o-animation-name: unquote($animation);
+  -o-animation-iteration-count: unquote($iterationCount);
+  -o-animation-fill-mode: unquote($fillMode); /* this prevents the animation from restarting! */
+
+  -ms-animation-delay: $delay;
+  -ms-animation-duration: $duration;
+  -ms-animation-timing-function: unquote($timingFunction);
+  -ms-animation-name: unquote($animation);
+  -ms-animation-iteration-count: unquote($iterationCount);
+  -ms-animation-fill-mode: unquote($fillMode); /* this prevents the animation from restarting! */
+
+  animation-delay: $delay;
+  animation-duration: $duration;
+  animation-timing-function: unquote($timingFunction);
+  animation-name: unquote($animation);
+  animation-iteration-count: unquote($iterationCount);
+  animation-fill-mode: unquote($fillMode); /* this prevents the animation from restarting! */
+}

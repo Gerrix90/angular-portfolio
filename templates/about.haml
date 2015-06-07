@@ -1,0 +1,141 @@
+.container.page.about-page
+  .row
+    .col-sm-12
+      %h1.text-center{:'ng-class' => "{ 'animated fadeInDown' : animateTitle }"} ABOUT ME
+
+  .row
+    .col-sm-12
+      .text-content
+        %p{:'ng-class' => "{ 'animated fadeInLeftSmall' : textAnimate }"}
+          Hi, I am a web developer living in Mumbai, and currently working for Endurance International (EIG) brands, which include
+          %a{:href => "http://hostgator.in/"} Hostgator
+          ,
+          %a{:href => "http://in.bluehost.com/"} Bluehost
+          ,
+          %a{:href => "http://bigrock.in/"} BigRock
+          and many more
+
+        %p{:'ng-class' => "{ 'animated fadeInRightSmall' : textAnimate }"} For 5 years I've designed, developed and maintained websites and apps for major International Hosting and Domain Brands for their Asia space. Though I have a Bachelor's degree in Science, specializing in IT, I'm for the most part self taught. And this came very naturally to me cause of my passion for web design and development.
+
+        %p{:'ng-class' => "{ 'animated fadeInLeftSmall' : textAnimate }"}
+          In my free time I created
+          %a{:href => "http://www.coreframework.in/"} Coreframework
+          , a php mvc framework, which can also be found on
+          %a{:href => "https://github.com/core-framework/core-framework"} Github
+        -#%br
+        -#%br
+        -#In Design I believe in simplicity and harmony of colors, it goes a long way to making the site look good. That combined with proper spacing, sizing and positioning of key elements and call to actions makes a website/app user friendly. And my passion for design or art in general doesn't just stop at the web, in my free time, I do a little pencil sketching now and then and also have spend some time in 3d as well.
+        -#%br
+        -#%br
+        -#In Development writing beautiful and non-repetitive code is essential. I follow the general standards and best practices to achieve this. And more often then not we all do get into sticky situations even in coding, how to best deal with those in the code comes with experience. Every thing I know comes from experience and hours reading and learning and in some cases building an app or website just to understand a language or tool better. I am always game for experimenting, learning and working with new tools and technologies.
+
+  .row
+    .col-sm-12
+      %h3 Skills
+
+  .skills.row
+    .col-xs-12.col-sm-3{:'ng-controller' => "chartHtmlCtrl"}
+      .title
+        %span.txt HTML / HTML5
+      %div.easypiechart{:easypiechart => '', :options => "options", :percent => "percent", :tooltip => "HTML / HTML5", :'tooltip-placement' => "top"}
+        .icons.html5
+
+    .col-xs-12.col-sm-3{:'ng-controller' => "chartHamlCtrl"}
+      .title
+        %span.txt Haml
+      %div.easypiechart{:easypiechart => '', :options => "options", :percent => "percent", :tooltip => "Haml", :'tooltip-placement' => "top"}
+        .icons.haml
+
+    .col-xs-12.col-sm-3{:'ng-controller' => "chartCssCtrl"}
+      .title
+        %span.txt CSS / CSS3
+      %div.easypiechart{:easypiechart => '', :options => "options", :percent => "percent", :tooltip => "CSS / CSS3", :'tooltip-placement' => "top"}
+        .icons.css3
+
+    .col-xs-12.col-sm-3{:'ng-controller' => "chartSassCtrl"}
+      .title
+        %span.txt Sass
+      %div.easypiechart{:easypiechart => '', :options => "options", :percent => "percent", :tooltip => "Sass", :'tooltip-placement' => "top"}
+        .icons.sass
+
+  .skills.row
+    .col-xs-12.col-sm-3{:'ng-controller' => "chartJqueryCtrl"}
+      .title
+        %span.txt Jquery / Javascript
+      %div.easypiechart{:easypiechart => '', :options => "options", :percent => "percent", :tooltip => "Jquery / Js", :'tooltip-placement' => "top"}
+        .icons.jquery
+
+    .col-xs-12.col-sm-3{:'ng-controller' => "chartAngularCtrl"}
+      .title
+        %span.txt AngularJs
+      %div.easypiechart{:easypiechart => '', :options => "options", :percent => "percent", :tooltip => "AngularJs", :'tooltip-placement' => "top"}
+        .icons.angular
+
+    .col-xs-12.col-sm-3{:'ng-controller' => "chartBackboneCtrl"}
+      .title
+        %span.txt Backbonejs
+      %div.easypiechart{:easypiechart => '', :options => "options", :percent => "percent", :tooltip => "BackboneJs", :'tooltip-placement' => "top"}
+        .icons.backbone
+
+    .col-xs-12.col-sm-3{:'ng-controller' => "chartPhpCtrl"}
+      .title
+        %span.txt PHP
+      %div.easypiechart{:easypiechart => '', :options => "options", :percent => "percent", :tooltip => "PHP", :'tooltip-placement' => "top"}
+        .icons.php
+
+  .skills.row
+    .col-xs-12.col-sm-3{:'ng-controller' => "chartMysqlCtrl"}
+      %div.title
+        %span.txt Mysql
+      %div.easypiechart{:easypiechart => '', :options => "options", :percent => "percent", :tooltip => "Mysql", :'tooltip-placement' => "top"}
+        .icons.mysql
+
+    .col-xs-12.col-sm-3{:'ng-controller' => "chartMongodbCtrl"}
+      %div.title
+        %span.txt MongoDb
+      %div.easypiechart{:easypiechart => '', :options => "options", :percent => "percent", :tooltip => "MongoDb", :'tooltip-placement' => "top"}
+        .icons.mongodb
+
+    .col-xs-12.col-sm-3{:'ng-controller' => "chartPhotoshopCtrl"}
+      %div.title
+        %span.txt Photoshop
+      %div.easypiechart{:easypiechart => '', :options => "options", :percent => "percent", :tooltip => "Photoshop", :'tooltip-placement' => "top"}
+        .icons.photoshop
+
+    .col-xs-12.col-sm-3{:'ng-controller' => "chartIllustratorCtrl"}
+      %div.title
+        %span.txt Illustrator
+      %div.easypiechart{:easypiechart => '', :options => "options", :percent => "percent", :tooltip => "Illustrator", :'tooltip-placement' => "top"}
+        .icons.illustrator
+
+  .row
+    %h3 Also worked with
+
+  .iconsWrp.row-fluid
+    .icons
+      Bootstrap
+      %img{:src => "../images/bootstrap-logo.png", :alt => "Bootstrap", :title => "Bootstrap"}
+
+    .icons
+      Jquery Mobile
+      %img{:src => "../images/jquery-mobile-logo.png", :alt => "Jquery Mobile", :title => "Jquery Mobile"}
+
+    .icons
+      Composer
+      %img{:src => "../images/composer-logo.png", :alt => "Composer", :title => "Composer"}
+
+    .icons
+      Bower
+      %img{:src => "../images/bower-logo.png", :alt => "Bower", :title => "Bower"}
+
+    .icons
+      Git
+      %img{:src => "../images/git-logo.png", :alt => "Git", :title => "Git"}
+
+    .icons
+      Grunt
+      %img{:src => "../images/grunt-logo.png", :alt => "Grunt", :title => "Grunt"}
+
+    .icons
+      Smarty
+      %img{:src => "../images/smarty-logo.png", :alt => "Smarty", :title => "Smarty"}

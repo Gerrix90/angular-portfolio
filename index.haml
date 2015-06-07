@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+%html{:"ng-app" => "portfolioApp"}
+%head{:lang =>"en", :"ng-app" => "portfolio"}
+  %meta{:charset => "UTF-8"}
+  %meta{:"http-equiv" => "X-UA-Compatible", :content => "IE=edge,chrome=1"}
+  %meta{:name => "viewport", :content => "user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1"}
+  %meta{:name => "apple-mobile-web-app-capable", :content => "yes"}
+  %base{:href => "/"}
+  <!-- Latest compiled and minified CSS -->
+  %link{:rel => "stylesheet", :href => "bower_components/bootstrap/dist/css/bootstrap.min.css"}
+  %link{:rel => "stylesheet", :href => "styles/font-awesome.min.css"}
+  %link{:rel => "stylesheet", :href => "styles/fonts.css"}
+  %link{:rel => "stylesheet", :href => "styles/style.css"}
+  %link{:rel => "stylesheet", :href => "styles/animate.css"}
+  -#%link{:rel => "stylesheet", :href => "http://fonts.googleapis.com/css?family=Montserrat"}
+
+  %script{:type => "text/javascript", :src => "bower_components/angular/angular.min.js"}
+  %script{:type => "text/javascript", :src => "bower_components/angular-route/angular-route.min.js"}
+  %script{:type => "text/javascript", :src => "bower_components/angular-animate/angular-animate.min.js"}
+  %script{:type => "text/javascript", :src => "js/ui-bootstrap-tpls-0.12.0.js"}
+  %script{:type => "text/javascript", :src => "bower_components/jquery.easy-pie-chart/dist/angular.easypiechart.min.js"}
+  %script{:type => "text/javascript", :src => "js/main.js"}
+
+  %title="Shalom Sam's Portfolio"
+%body{:"ng-controller" => "MasterController", :"class" => "{{ pageClass }}"}
+  //.appWrap{:class => "{{pageClass}}"}
+  %header.header-wrap{:"ng-controller" => "HeaderController"}
+    .contentWrp
+      .container.nav-wrap.navbar-custom.navbar-static-top
+        .navbar-header
+          %a.navbar-brand
+          %button.navbar-toggle{:"ng-click" => "isCollapsed = !isCollapsed"}
+            %span.sr-only Toggle navigation
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+
+      .container
+        .row.dpWrapper.text-center{:'ng-class' => "{ 'animated fadeIn' : animateImg }"}
+          -#.displayPic.img-responsive.cartoon
+          %img.img-responsive.center-block{:src => "/images/login-avatar.png", :"ng-class" => "{ 'animated bounceInDown' : animateImg }"}
+
+        .row.introMsgWrp
+          .col-md-2.col-xs-2.text-center.visible-md.visible-lg
+            %a{:href => "http://www.facebook.com/shalom.sam", :'ng-class' => "{ 'animated fadeInLeft' : animateImg }"}
+              %i.fa.fa-facebook
+
+          .col-md-2.col-xs-2.text-center.visible-md.visible-lg
+            %a{:href => "http://www.twitter.com/Shalom_Sam", :'ng-class' => "{ 'animated fadeInLeft' : animateImg }"}
+              %i.fa.fa-twitter
+
+          .col-md-4.col-xs-12.text-center.fname{:'ng-class' => "{ 'animated fadeInUp' : animateImg }"}
+            %span Shalom Sam
+
+          .col-md-2.col-xs-2.text-center.visible-md.visible-lg
+            %a{:href => "http://www.linkedin.com/shalomsam", :'ng-class' => "{ 'animated fadeInRight' : animateImg }"}
+              %i.fa.fa-linkedin
+
+          .col-md-2.col-xs-2.text-center.visible-md.visible-lg
+            %a{:href => "http://www.angellist.com", :'ng-class' => "{ 'animated fadeInRight' : animateImg }"}
+              %i.fa.fa-angellist
+
+        .row.socialWrp-xs.visible-xs
+          .col-xs-12
+
+      .container-fluid.navbar.navbar-custom.navbar-fixed-bottom.navbar-inverse.nav-wrap.bottom
+        .navbar-header
+          %a.navbar-brand.hidden Shalom Sam
+          %button.navbar-toggle{:"ng-click" => "isCollapsed2 = !isCollapsed2"}
+            %span.sr-only Toggle navigation
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+        %nav.navbar-collapse.collapse{:collapse => "isCollapsed2"}
+          %ul{:class => "nav navbar-nav nav-main"}
+            %li{"ng-class" => "{ active: isActive('/') }"}
+              %a{:href => "/"} HOME
+
+            %li{"ng-class" => "{ active: isActive('/about') }"}
+              %a{:href => "/about"} ABOUT
+
+            -#%li{"ng-class" => "{ active: isActive('/skills') }"}
+            -#  %a{:href => "/skills"} SKILLS
+
+            -#%li{"ng-class" => "{ active: isActive('/experience') }"}
+            -#  %a{:href => "/experience"} EXPERIENCE
+
+            -#%li{"ng-class" => "{ active: isActive('/education') }"}
+            -#  %a{:href => "/education"} EDUCATION
+
+            %li{"ng-class" => "{ active: isActive('/portfolio') }"}
+              %a{:href => "/portfolio"} PORTFOLIO
+
+            %li{"ng-class" => "{ active: isActive('/contact') }"}
+              %a{:href => "/contact"} CONTACT
+
+  .view-animate-container
+    .section-box.view-animate{:"ng-view" => ""}

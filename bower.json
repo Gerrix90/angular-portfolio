@@ -1,0 +1,34 @@
+{
+  "name": "Shalom Sam",
+  "version": "0.0.1",
+  "authors": [
+    "Shalom Sam <shalom.s@directi.com>"
+  ],
+  "description": "Personal Portfolio",
+  "main": "index.html",
+  "keywords": [
+    "shalom",
+    "sam",
+    "portfolio"
+  ],
+  "license": "MIT",
+  "homepage": "www.shalomsam.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "stable",
+    "angular-route": "~1.4.0",
+    "angular-animate": "~1.4.0",
+    "angular-ui-router": "~0.2.15",
+    "bootstrap": "~3.3.4",
+    "angular-ui-bootstrap": "~0.13.0",
+    "jquery.easy-pie-chart": "~2.1.6",
+    "jquery": "~2.1.4"
+  }
+}

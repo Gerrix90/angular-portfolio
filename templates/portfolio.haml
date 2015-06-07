@@ -1,0 +1,145 @@
+.container.page.portfolio-page
+  %h1.text-center{:'ng-class' => "{ 'animated fadeInDown' : animateTitle }"} PORTFOLIO
+
+  .h6.text-center.subtitle Some of my recent work
+
+  .portfolioWrp
+    .row
+      .col-xs-12.col-sm-4
+        %a.box{:href => "/portfolio/being-desi"}
+          .logoWrp
+            .brandLogo.being-desi
+
+          .title
+            %p Being.desi
+
+      .col-xs-12.col-sm-4
+        %a.box{:href => "/portfolio/hostgator"}
+          .logoWrp
+            .brandLogo.hostgator
+
+          .title
+            %p Hostgator
+
+      .col-xs-12.col-sm-4
+        %a.box{:href => "/portfolio/bluehost"}
+          .logoWrp
+            .brandLogo.bluehost
+
+          .title
+            %p Bluehost
+
+    .row
+      .col-xs-12.col-sm-4
+        %a.box{:href => "/portfolio/bigrock"}
+          .logoWrp
+            .brandLogo.bigrock
+
+          .title
+            %p BigRock
+
+      .col-xs-12.col-sm-4
+        %a.box{:href => "/portfolio/gibo"}
+          .logoWrp
+            .brandLogo.gibo
+
+          .title
+            %p Gibo
+
+      .col-xs-12.col-sm-4
+        %a.box{:href => "/portfolio/gafbo"}
+          .logoWrp
+            .brandLogo.gafbo
+
+          .title
+            %p Gafbo
+
+    .row
+      .col-xs-12.col-sm-4
+        %a.box{:href => "/portfolio/rod"}
+          .logoWrp
+            .brandLogo.rod
+
+          .title
+            %p Rock Stars Of Design
+
+      .col-xs-12.col-sm-4
+        %a.box{:href => "/portfolio/httpx"}
+          .logoWrp
+            .brandLogo.httpx
+
+          .title
+            %p HttpX
+
+      .col-xs-12.col-sm-4
+        %a.box{:href => "/portfolio/word-up"}
+          .logoWrp
+            .brandLogo.word-up
+
+          .title
+            %p Word-up
+
+    .row
+      .col-xs-12.col-sm-4
+        %a.box{:href => "/portfolio/bluehost-blog"}
+          .logoWrp
+            .brandLogo.bluehost-blog
+
+          .title
+            %p Bluehost blog
+
+      .col-xs-12.col-sm-4
+        %a.box{:href => "/portfolio/bigrock-blog"}
+          .logoWrp
+            .brandLogo.bigrock-blog
+
+          .title
+            %p Bigrock blog
+
+      -#.col-xs-12.col-sm-4
+      -#  .box
+      -#    .brandLogo
+      -#
+      -#    .title Hostgator blog
+
+
+
+-#%sub-pages{:src => " includeFile ", :class => 'subPageWrp', :'ng-class' => "{active: animateSubPage }"}
+-#, :'ng-class' => "{active: supPageActive }"
+-#%ng-include{:src => " includeFile ", :class => 'subPageWrp', :'ng-class' => "{active: includeFile != '' }"}
+
+.switchWrp{:'ng-switch' => '', :on => "subPage", :'ng-class' => "{active: animateSubPage}"}
+  .case{'ng-switch-when' => "being-desi"}
+    %ng-include.template{:src => "'templates/partials/being-desi.html'"}
+
+  .case{'ng-switch-when' => "hostgator"}
+    %ng-include.template{:src => "'templates/partials/hostgator.html'"}
+
+  .case{'ng-switch-when' => "bluehost"}
+    %ng-include.template{:src => "'templates/partials/bluehost.html'"}
+
+  .case{'ng-switch-when' => "bigrock"}
+    %ng-include.template{:src => "'templates/partials/bigrock.html'"}
+
+  .case{'ng-switch-when' => "gibo"}
+    %ng-include.template{:src => "'templates/partials/gibo.html'"}
+
+  .case{'ng-switch-when' => "gafbo"}
+    %ng-include.template{:src => "'templates/partials/gafbo.html'"}
+
+  .case{'ng-switch-when' => "rod"}
+    %ng-include.template{:src => "'templates/partials/rod.html'"}
+
+  .case{'ng-switch-when' => "httpx"}
+    %ng-include.template{:src => "'templates/partials/httpx.html'"}
+
+  .case{'ng-switch-when' => "word-up"}
+    %ng-include.template{:src => "'templates/partials/word-up.html'"}
+
+  .case{'ng-switch-when' => "bigrock-blog"}
+    %ng-include.template{:src => "'templates/partials/bigrock-blog.html'"}
+
+  .case{'ng-switch-when' => "bluehost-blog"}
+    %ng-include.template{:src => "'templates/partials/bluehost-blog.html'"}
+
+  .case{'ng-switch-default' => ""}
