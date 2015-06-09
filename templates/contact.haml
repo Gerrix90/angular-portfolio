@@ -1,2 +1,17 @@
 .container.page.contact-page
   %h1.text-center{:'ng-class' => "{ 'animated fadeInDown' : animateTitle }"} CONTACT ME
+
+  .contactWrp
+    .row
+      .col-xs-12
+        If you have some crazy startup idea or would like to work with me or simply chat, you could get in touch with me on either social using the links provided below or simple send me a
+        %a{:href => "mailto:shalom.s@coreframework.in"} mail
+        and I'll respond promptly :)
+
+    .row
+      .col-xs-12.text-center.socialWrp
+        %a.fa.fa-envelope{:href => "mailto:shalom.s@coreframework.in"}
+        %a.fa.fa-facebook{:href => "http://www.facebook.com/shalom.sam"}
+        %a.fa.fa-twitter{:href => "http://www.twitter.com/Shalom_Sam"}
+        %a.fa.fa-linkedin{:href => "http://www.linkedin.com/shalomsam"}
+        %a.fa.fa-angellist{:href => "https://angel.co/shalom-sam"}

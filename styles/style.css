@@ -875,7 +875,7 @@ section {
     .view-animate-container .section-box .page {
       padding: 20px 0; }
       .view-animate-container .section-box .page .text-content {
-        font-size: 20px;
+        font-size: 22px;
         margin: 20px 0; }
     .view-animate-container .section-box .portfolio-page .portfolioWrp {
       margin-top: 30px; }
@@ -1088,3 +1088,54 @@ section {
 .snapshotWrp .snapshots img {
   margin: 20px auto;
   border-radius: 5px; }
+
+.contactWrp {
+  margin-top: 20px;
+  font-size: 22px; }
+  .contactWrp .socialWrp {
+    padding: 20px 0;
+    margin-top: 20px;
+    border-top: 1px solid #ccc; }
+    .contactWrp .socialWrp .fa {
+      font-size: 22px;
+      cursor: pointer;
+      color: #434343;
+      text-decoration: none;
+      margin: 10px 20px;
+      display: inline-block;
+      vertical-align: middle;
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0);
+      box-shadow: 0 0 1px transparent;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      -moz-osx-font-smoothing: grayscale;
+      position: relative;
+      -webkit-transition-duration: 0.3s;
+      transition-duration: 0.3s;
+      -webkit-transition-property: transform;
+      transition-property: transform; }
+      .contactWrp .socialWrp .fa:after {
+        pointer-events: none;
+        position: absolute;
+        z-index: -1;
+        content: '';
+        top: 100%;
+        left: 5%;
+        height: 10px;
+        width: 90%;
+        opacity: 0;
+        background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.35) 0%, transparent 80%);
+        background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, transparent 80%);
+        /* W3C */
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        -webkit-transition-property: transform, opacity;
+        transition-property: transform, opacity; }
+      .contactWrp .socialWrp .fa:hover {
+        -webkit-transform: translateY(-5px);
+        transform: translateY(-5px); }
+      .contactWrp .socialWrp .fa:hover:after {
+        opacity: 1;
+        -webkit-transform: translateY(5px);
+        transform: translateY(5px); }
