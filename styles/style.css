@@ -586,6 +586,23 @@
 .fadeInRightSmall {
   animation-name: fadeInRightSmall; }
 
+.grow {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform; }
+  .grow:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1); }
+
 @font-face {
   font-family: 'Montserrat';
   font-style: normal;
@@ -746,6 +763,39 @@ body {
       body header .nav-wrap.bottom .nav-main li {
         float: none;
         display: inline-block; }
+    body header .socialWrp-xs {
+      font-size: 30px;
+      font-size: 3.5vw;
+      margin-top: 20px; }
+    body header .introMsgWrp .fa, body header .socialWrp-xs .fa {
+      display: inline-block;
+      max-width: 100px;
+      width: 100px;
+      height: 50px;
+      text-decoration: none;
+      margin: 15px auto;
+      vertical-align: middle;
+      -webkit-transition: all 0.4s cubic-bezier(0.9, 0.16, 0.46, 1.92);
+      -moz-transition: all 0.4s cubic-bezier(0.9, 0.16, 0.46, 1.92);
+      /*noinspection CssUnknownProperty*/
+      -ms-transition: all 0.4s cubic-bezier(0.9, 0.16, 0.46, 1.92);
+      -o-transition: all 0.4s cubic-bezier(0.9, 0.16, 0.46, 1.92);
+      transition: all 0.4s cubic-bezier(0.9, 0.16, 0.46, 1.92); }
+      body header .introMsgWrp .fa:hover, body header .socialWrp-xs .fa:hover {
+        font-size: 40px;
+        font-size: 4vw; }
+        body header .introMsgWrp .fa:hover.fa-facebook, body header .socialWrp-xs .fa:hover.fa-facebook {
+          color: #3b5998;
+          text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white; }
+        body header .introMsgWrp .fa:hover.fa-twitter, body header .socialWrp-xs .fa:hover.fa-twitter {
+          color: #00aced;
+          text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white; }
+        body header .introMsgWrp .fa:hover.fa-linkedin, body header .socialWrp-xs .fa:hover.fa-linkedin {
+          color: #007bb6;
+          text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white; }
+        body header .introMsgWrp .fa:hover.fa-angellist, body header .socialWrp-xs .fa:hover.fa-angellist {
+          color: white;
+          text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black; }
   body.home header {
     -webkit-animation-delay: 0s;
     -webkit-animation-duration: 1s;
@@ -877,131 +927,133 @@ section {
       .view-animate-container .section-box .page .text-content {
         font-size: 22px;
         margin: 20px 0; }
-    .view-animate-container .section-box .portfolio-page .portfolioWrp {
-      margin-top: 30px; }
-      .view-animate-container .section-box .portfolio-page .portfolioWrp .row {
-        margin: 20px; }
-        .view-animate-container .section-box .portfolio-page .portfolioWrp .row .box {
-          position: relative;
-          overflow: hidden;
-          display: block;
-          min-height: 150px;
-          text-align: center;
-          background: white;
-          border-width: 1px 1px 4px 1px;
-          border-color: #c0c7d1;
-          border-style: solid;
-          -webkit-transition: all 0.5s ease-in-out 0s;
-          -moz-transition: all 0.5s ease-in-out 0s;
-          /*noinspection CssUnknownProperty*/
-          -ms-transition: all 0.5s ease-in-out 0s;
-          -o-transition: all 0.5s ease-in-out 0s;
-          transition: all 0.5s ease-in-out 0s;
-          transition-timing-function: cubic-bezier(0.9, 0.16, 0.46, 1.92); }
-          .view-animate-container .section-box .portfolio-page .portfolioWrp .row .box > div {
-            padding: 15px; }
-            .view-animate-container .section-box .portfolio-page .portfolioWrp .row .box > div > p {
-              margin: 0; }
-          .view-animate-container .section-box .portfolio-page .portfolioWrp .row .box .brandLogo {
-            width: 100%;
-            height: 145px;
-            background-size: contain;
-            background-position-y: 50%;
-            background-position-x: 50%;
-            background-repeat: no-repeat; }
-            .view-animate-container .section-box .portfolio-page .portfolioWrp .row .box .brandLogo.being-desi {
-              background-image: url("../images/beingdesi-logo.png"); }
-            .view-animate-container .section-box .portfolio-page .portfolioWrp .row .box .brandLogo.hostgator {
-              background-image: url("../images/hostgator-logo.png"); }
-            .view-animate-container .section-box .portfolio-page .portfolioWrp .row .box .brandLogo.bluehost {
-              background-image: url("../images/bluehostindia-logo.jpg"); }
-            .view-animate-container .section-box .portfolio-page .portfolioWrp .row .box .brandLogo.bigrock {
-              background-image: url("../images/bigrock-logo.gif"); }
-            .view-animate-container .section-box .portfolio-page .portfolioWrp .row .box .brandLogo.gibo {
-              background-image: url("../images/gibo-logo.png"); }
-            .view-animate-container .section-box .portfolio-page .portfolioWrp .row .box .brandLogo.gafbo {
-              background-image: url("../images/gafbo-logo.png"); }
-            .view-animate-container .section-box .portfolio-page .portfolioWrp .row .box .brandLogo.rod {
-              background-image: url("../images/rod-logo1.jpg"); }
-            .view-animate-container .section-box .portfolio-page .portfolioWrp .row .box .brandLogo.httpx {
-              background-image: url("../images/httpx-logo.png"); }
-            .view-animate-container .section-box .portfolio-page .portfolioWrp .row .box .brandLogo.word-up {
-              background-image: url("../images/wordup-logo-2015.png"); }
-            .view-animate-container .section-box .portfolio-page .portfolioWrp .row .box .brandLogo.bluehost-blog {
-              background-image: url("../images/bluehost-blog-logo.png"); }
-            .view-animate-container .section-box .portfolio-page .portfolioWrp .row .box .brandLogo.bigrock-blog {
-              background-image: url("../images/bigrock-blog-logo.gif"); }
-          .view-animate-container .section-box .portfolio-page .portfolioWrp .row .box .title {
-            background: rgba(0, 0, 0, 0.8);
-            color: white;
-            position: absolute;
-            width: 100%;
-            padding: 0;
-            bottom: -45px;
-            -webkit-transition: all 0.5s ease-in-out 0s;
-            -moz-transition: all 0.5s ease-in-out 0s;
-            /*noinspection CssUnknownProperty*/
-            -ms-transition: all 0.5s ease-in-out 0s;
-            -o-transition: all 0.5s ease-in-out 0s;
-            transition: all 0.5s ease-in-out 0s; }
-            .view-animate-container .section-box .portfolio-page .portfolioWrp .row .box .title p, .view-animate-container .section-box .portfolio-page .portfolioWrp .row .box .title span {
-              padding: 10px; }
-          .view-animate-container .section-box .portfolio-page .portfolioWrp .row .box:hover {
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); }
-            .view-animate-container .section-box .portfolio-page .portfolioWrp .row .box:hover .title {
-              bottom: 0; }
-    .view-animate-container .section-box .about-page h3 {
-      margin: 10px 0 25px 0; }
-    .view-animate-container .section-box .about-page h3:last-child {
-      margin: 25px 0 0 0; }
-    .view-animate-container .section-box .about-page .row {
-      margin: 20px 0; }
-      .view-animate-container .section-box .about-page .row div[class*="col-"] .title {
-        display: none; }
-      .view-animate-container .section-box .about-page .row div[class*="col-"] .easypiechart {
-        text-align: center; }
-        .view-animate-container .section-box .about-page .row div[class*="col-"] .easypiechart .icons {
-          position: absolute;
-          background: url("../images/ico-html5.png") no-repeat scroll center center transparent;
-          top: -4px;
-          bottom: 0;
-          left: 14px;
-          right: 15px;
-          background-size: 38px; }
-          .view-animate-container .section-box .about-page .row div[class*="col-"] .easypiechart .icons.haml {
-            background-image: url("../images/ico-haml.png"); }
-          .view-animate-container .section-box .about-page .row div[class*="col-"] .easypiechart .icons.css3 {
-            background-image: url("../images/ico-css3.png"); }
-          .view-animate-container .section-box .about-page .row div[class*="col-"] .easypiechart .icons.sass {
-            background-image: url("../images/ico-sass.png"); }
-          .view-animate-container .section-box .about-page .row div[class*="col-"] .easypiechart .icons.jquery {
-            background-image: url("../images/ico-jquery.png"); }
-          .view-animate-container .section-box .about-page .row div[class*="col-"] .easypiechart .icons.angular {
-            background-image: url("../images/ico-angular.png"); }
-          .view-animate-container .section-box .about-page .row div[class*="col-"] .easypiechart .icons.backbone {
-            background-image: url("../images/ico-backbone.png"); }
-          .view-animate-container .section-box .about-page .row div[class*="col-"] .easypiechart .icons.php {
-            background-image: url("../images/ico-php.png"); }
-          .view-animate-container .section-box .about-page .row div[class*="col-"] .easypiechart .icons.mysql {
-            background-image: url("../images/ico-mysql.png"); }
-          .view-animate-container .section-box .about-page .row div[class*="col-"] .easypiechart .icons.mongodb {
-            background-image: url("../images/ico-mongodb.png"); }
-          .view-animate-container .section-box .about-page .row div[class*="col-"] .easypiechart .icons.photoshop {
-            background-image: url("../images/ico-photoshop.png"); }
-          .view-animate-container .section-box .about-page .row div[class*="col-"] .easypiechart .icons.illustrator {
-            background-image: url("../images/ico-ai.png"); }
-    .view-animate-container .section-box .about-page .iconsWrp {
-      margin-top: -26px; }
-      .view-animate-container .section-box .about-page .iconsWrp .icons {
-        text-align: center;
+
+.about-page h3 {
+  margin: 10px 0 25px 0; }
+.about-page h3:last-child {
+  margin: 25px 0 0 0; }
+.about-page .row {
+  margin: 20px 0; }
+  .about-page .row div[class*="col-"] .title {
+    display: none; }
+  .about-page .row div[class*="col-"] .easypiechart {
+    text-align: center; }
+    .about-page .row div[class*="col-"] .easypiechart .icons {
+      position: absolute;
+      background: url("../images/ico-html5.png") no-repeat scroll center center transparent;
+      top: -4px;
+      bottom: 0;
+      left: 14px;
+      right: 15px;
+      background-size: 38px; }
+      .about-page .row div[class*="col-"] .easypiechart .icons.haml {
+        background-image: url("../images/ico-haml.png"); }
+      .about-page .row div[class*="col-"] .easypiechart .icons.css3 {
+        background-image: url("../images/ico-css3.png"); }
+      .about-page .row div[class*="col-"] .easypiechart .icons.sass {
+        background-image: url("../images/ico-sass.png"); }
+      .about-page .row div[class*="col-"] .easypiechart .icons.jquery {
+        background-image: url("../images/ico-jquery.png"); }
+      .about-page .row div[class*="col-"] .easypiechart .icons.angular {
+        background-image: url("../images/ico-angular.png"); }
+      .about-page .row div[class*="col-"] .easypiechart .icons.backbone {
+        background-image: url("../images/ico-backbone.png"); }
+      .about-page .row div[class*="col-"] .easypiechart .icons.php {
+        background-image: url("../images/ico-php.png"); }
+      .about-page .row div[class*="col-"] .easypiechart .icons.mysql {
+        background-image: url("../images/ico-mysql.png"); }
+      .about-page .row div[class*="col-"] .easypiechart .icons.mongodb {
+        background-image: url("../images/ico-mongodb.png"); }
+      .about-page .row div[class*="col-"] .easypiechart .icons.photoshop {
+        background-image: url("../images/ico-photoshop.png"); }
+      .about-page .row div[class*="col-"] .easypiechart .icons.illustrator {
+        background-image: url("../images/ico-ai.png"); }
+.about-page .iconsWrp {
+  margin-top: -26px; }
+  .about-page .iconsWrp .icons {
+    text-align: center;
+    background-size: contain;
+    display: inline-block;
+    height: 100px;
+    margin: 5px;
+    text-indent: -99999px; }
+    .about-page .iconsWrp .icons img {
+      height: 100%;
+      display: block; }
+
+.portfolio-page .portfolioWrp {
+  margin-top: 30px; }
+  .portfolio-page .portfolioWrp .row {
+    margin: 20px; }
+    .portfolio-page .portfolioWrp .row .box {
+      position: relative;
+      overflow: hidden;
+      display: block;
+      min-height: 150px;
+      text-align: center;
+      background: white;
+      border-width: 1px 1px 4px 1px;
+      border-color: #c0c7d1;
+      border-style: solid;
+      -webkit-transition: all 0.5s ease-in-out 0s;
+      -moz-transition: all 0.5s ease-in-out 0s;
+      /*noinspection CssUnknownProperty*/
+      -ms-transition: all 0.5s ease-in-out 0s;
+      -o-transition: all 0.5s ease-in-out 0s;
+      transition: all 0.5s ease-in-out 0s;
+      transition-timing-function: cubic-bezier(0.9, 0.16, 0.46, 1.92); }
+      .portfolio-page .portfolioWrp .row .box > div {
+        padding: 15px; }
+        .portfolio-page .portfolioWrp .row .box > div > p {
+          margin: 0; }
+      .portfolio-page .portfolioWrp .row .box .brandLogo {
+        width: 100%;
+        height: 145px;
         background-size: contain;
-        display: inline-block;
-        height: 100px;
-        margin: 5px;
-        text-indent: -99999px; }
-        .view-animate-container .section-box .about-page .iconsWrp .icons img {
-          height: 100%;
-          display: block; }
+        background-position-y: 50%;
+        background-position-x: 50%;
+        background-repeat: no-repeat; }
+        .portfolio-page .portfolioWrp .row .box .brandLogo.being-desi {
+          background-image: url("../images/beingdesi-logo.png"); }
+        .portfolio-page .portfolioWrp .row .box .brandLogo.hostgator {
+          background-image: url("../images/hostgator-logo.png"); }
+        .portfolio-page .portfolioWrp .row .box .brandLogo.bluehost {
+          background-image: url("../images/bluehostindia-logo.jpg"); }
+        .portfolio-page .portfolioWrp .row .box .brandLogo.bigrock {
+          background-image: url("../images/bigrock-logo.gif"); }
+        .portfolio-page .portfolioWrp .row .box .brandLogo.gibo {
+          background-image: url("../images/gibo-logo.png"); }
+        .portfolio-page .portfolioWrp .row .box .brandLogo.gafbo {
+          background-image: url("../images/gafbo-logo.png"); }
+        .portfolio-page .portfolioWrp .row .box .brandLogo.rod {
+          background-image: url("../images/rod-logo1.jpg"); }
+        .portfolio-page .portfolioWrp .row .box .brandLogo.httpx {
+          background-image: url("../images/httpx-logo.png"); }
+        .portfolio-page .portfolioWrp .row .box .brandLogo.word-up {
+          background-image: url("../images/wordup-logo-2015.png"); }
+        .portfolio-page .portfolioWrp .row .box .brandLogo.bluehost-blog {
+          background-image: url("../images/bluehost-blog-logo.png"); }
+        .portfolio-page .portfolioWrp .row .box .brandLogo.bigrock-blog {
+          background-image: url("../images/bigrock-blog-logo.gif"); }
+      .portfolio-page .portfolioWrp .row .box .title {
+        background: rgba(0, 0, 0, 0.8);
+        color: white;
+        position: absolute;
+        width: 100%;
+        padding: 0;
+        bottom: -45px;
+        -webkit-transition: all 0.5s ease-in-out 0s;
+        -moz-transition: all 0.5s ease-in-out 0s;
+        /*noinspection CssUnknownProperty*/
+        -ms-transition: all 0.5s ease-in-out 0s;
+        -o-transition: all 0.5s ease-in-out 0s;
+        transition: all 0.5s ease-in-out 0s; }
+        .portfolio-page .portfolioWrp .row .box .title p, .portfolio-page .portfolioWrp .row .box .title span {
+          padding: 10px; }
+      .portfolio-page .portfolioWrp .row .box:hover {
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); }
+        .portfolio-page .portfolioWrp .row .box:hover .title {
+          bottom: 0; }
 
 .switchWrp {
   position: absolute;
@@ -1097,7 +1149,7 @@ section {
     margin-top: 20px;
     border-top: 1px solid #ccc; }
     .contactWrp .socialWrp .fa {
-      font-size: 22px;
+      font-size: 38px;
       cursor: pointer;
       color: #434343;
       text-decoration: none;

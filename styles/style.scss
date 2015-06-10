@@ -157,6 +157,50 @@ body {
 
     }
 
+    .socialWrp-xs {
+      font-size: 30px;
+      font-size: 3.5vw;
+      margin-top: 20px;
+    }
+
+    .introMsgWrp, .socialWrp-xs {
+      .fa {
+        display: inline-block;
+        max-width: 100px;
+        width: 100px;
+        height: 50px;
+        text-decoration: none;
+        margin: 15px auto;
+        vertical-align: middle;
+        @include transition(all 0.4s cubic-bezier(0.9, 0.16, 0.46, 1.92));
+
+        &:hover {
+          font-size: 40px;
+          font-size: 4vw;
+
+          &.fa-facebook {
+            color: #3b5998;
+            text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
+          }
+
+          &.fa-twitter {
+            color: #00aced;
+            text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
+          }
+
+          &.fa-linkedin {
+            color: #007bb6;
+            text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
+          }
+
+          &.fa-angellist {
+            color: white;
+            text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+          }
+        }
+      }
+    }
+
   }
 
   &.home {
@@ -225,217 +269,219 @@ section {
 
     }
 
-    .portfolio-page {
-
-      .portfolioWrp {
-        margin-top: 30px;
-
-        .row {
-          margin: 20px;
-
-          .box {
-            position: relative;
-            overflow: hidden;
-            //cursor: pointer;
-            display: block;
-            //padding: 10px 20px;
-            min-height: 150px;
-            text-align: center;
-            background: white;
-            border-width: 1px 1px 4px 1px;
-            border-color: darken($boxBorder, 1);
-            border-style: solid;
-            @include transition(all 0.5s ease-in-out 0s);
-            transition-timing-function: cubic-bezier(0.9, 0.16, 0.46, 1.92);
-
-            & > div {
-              padding: 15px;
-
-              & > p {
-                margin: 0;
-              }
-            }
-
-            .brandLogo {
-              width: 100%;
-              height: 145px;
-              background-size: contain;
-              background-position-y: 50%;
-              background-position-x: 50%;
-              background-repeat: no-repeat;
-
-              &.being-desi {
-                background-image: url('../images/beingdesi-logo.png');
-              }
-
-              &.hostgator {
-                background-image: url('../images/hostgator-logo.png');
-              }
-
-              &.bluehost {
-                background-image: url('../images/bluehostindia-logo.jpg');
-              }
-
-              &.bigrock {
-                background-image: url('../images/bigrock-logo.gif');
-              }
-
-              &.gibo {
-                background-image: url('../images/gibo-logo.png');
-              }
-
-              &.gafbo {
-                background-image: url('../images/gafbo-logo.png');
-              }
-
-              &.rod {
-                background-image: url('../images/rod-logo1.jpg');
-              }
-
-              &.httpx {
-                background-image: url('../images/httpx-logo.png');
-              }
-
-              &.word-up {
-                background-image: url('../images/wordup-logo-2015.png');
-              }
-
-              &.bluehost-blog {
-                background-image: url('../images/bluehost-blog-logo.png');
-              }
-
-              &.bigrock-blog {
-                background-image: url('../images/bigrock-blog-logo.gif');
-              }
-            }
-
-            .title {
-              background: rgba(0,0,0,0.8);
-              color: white;
-              position: absolute;
-              width: 100%;
-              padding: 0;
-              bottom: -45px;
-              @include transition(all 0.5s ease-in-out 0s);
-
-              p, span {
-                padding: 10px;
-              }
-            }
-
-            &:hover {
-              box-shadow: 0 4px 10px rgba(0,0,0,0.4);
-
-              .title {
-                bottom: 0;
-              }
-            }
-
-          }
-        }
-      }
-    }
-
-    .about-page {
-      h3 {
-        margin: 10px 0 25px 0;
-      }
-
-      h3:last-child {
-        margin: 25px 0 0 0;
-      }
-
-      .row {
-        margin: 20px 0;
-
-        div[class*="col-"] {
-          .title {
-
-            display: none;
-          }
-
-          .easypiechart {
-            text-align: center;
-
-            .icons {
-              position: absolute;
-              background: url("../images/ico-html5.png") no-repeat scroll center center transparent;
-              top: -4px;
-              bottom: 0;
-              left: 14px;
-              right: 15px;
-              background-size: 38px;
-
-              &.haml {
-                background-image: url("../images/ico-haml.png");
-              }
-
-              &.css3 {
-                background-image: url("../images/ico-css3.png");
-              }
-
-              &.sass {
-                background-image: url("../images/ico-sass.png");
-              }
-
-              &.jquery {
-                background-image: url("../images/ico-jquery.png");
-              }
-
-              &.angular {
-                background-image: url("../images/ico-angular.png");
-              }
-
-              &.backbone {
-                background-image: url("../images/ico-backbone.png");
-              }
-
-              &.php {
-                background-image: url("../images/ico-php.png");
-              }
-
-              &.mysql {
-                background-image: url("../images/ico-mysql.png");
-              }
-
-              &.mongodb {
-                background-image: url("../images/ico-mongodb.png");
-              }
-
-              &.photoshop {
-                background-image: url("../images/ico-photoshop.png");
-              }
-
-              &.illustrator {
-                background-image: url("../images/ico-ai.png");
-              }
-            }
-          }
-        }
-      }
-
-      .iconsWrp {
-        margin-top: -26px;
-
-        .icons {
-          text-align: center;
-          background-size: contain;
-          display: inline-block;
-          height: 100px;
-          margin: 5px;
-          text-indent: -99999px;
-
-          img {
-            height: 100%;
-            display: block;
-          }
-        }
-      }
-    }
-
   }
 }
 
+
+
+.about-page {
+  h3 {
+    margin: 10px 0 25px 0;
+  }
+
+  h3:last-child {
+    margin: 25px 0 0 0;
+  }
+
+  .row {
+    margin: 20px 0;
+
+    div[class*="col-"] {
+      .title {
+
+        display: none;
+      }
+
+      .easypiechart {
+        text-align: center;
+
+        .icons {
+          position: absolute;
+          background: url("../images/ico-html5.png") no-repeat scroll center center transparent;
+          top: -4px;
+          bottom: 0;
+          left: 14px;
+          right: 15px;
+          background-size: 38px;
+
+          &.haml {
+            background-image: url("../images/ico-haml.png");
+          }
+
+          &.css3 {
+            background-image: url("../images/ico-css3.png");
+          }
+
+          &.sass {
+            background-image: url("../images/ico-sass.png");
+          }
+
+          &.jquery {
+            background-image: url("../images/ico-jquery.png");
+          }
+
+          &.angular {
+            background-image: url("../images/ico-angular.png");
+          }
+
+          &.backbone {
+            background-image: url("../images/ico-backbone.png");
+          }
+
+          &.php {
+            background-image: url("../images/ico-php.png");
+          }
+
+          &.mysql {
+            background-image: url("../images/ico-mysql.png");
+          }
+
+          &.mongodb {
+            background-image: url("../images/ico-mongodb.png");
+          }
+
+          &.photoshop {
+            background-image: url("../images/ico-photoshop.png");
+          }
+
+          &.illustrator {
+            background-image: url("../images/ico-ai.png");
+          }
+        }
+      }
+    }
+  }
+
+  .iconsWrp {
+    margin-top: -26px;
+
+    .icons {
+      text-align: center;
+      background-size: contain;
+      display: inline-block;
+      height: 100px;
+      margin: 5px;
+      text-indent: -99999px;
+
+      img {
+        height: 100%;
+        display: block;
+      }
+    }
+  }
+}
+
+
+.portfolio-page {
+
+  .portfolioWrp {
+    margin-top: 30px;
+
+    .row {
+      margin: 20px;
+
+      .box {
+        position: relative;
+        overflow: hidden;
+        //cursor: pointer;
+        display: block;
+        //padding: 10px 20px;
+        min-height: 150px;
+        text-align: center;
+        background: white;
+        border-width: 1px 1px 4px 1px;
+        border-color: darken($boxBorder, 1);
+        border-style: solid;
+        @include transition(all 0.5s ease-in-out 0s);
+        transition-timing-function: cubic-bezier(0.9, 0.16, 0.46, 1.92);
+
+        & > div {
+          padding: 15px;
+
+          & > p {
+            margin: 0;
+          }
+        }
+
+        .brandLogo {
+          width: 100%;
+          height: 145px;
+          background-size: contain;
+          background-position-y: 50%;
+          background-position-x: 50%;
+          background-repeat: no-repeat;
+
+          &.being-desi {
+            background-image: url('../images/beingdesi-logo.png');
+          }
+
+          &.hostgator {
+            background-image: url('../images/hostgator-logo.png');
+          }
+
+          &.bluehost {
+            background-image: url('../images/bluehostindia-logo.jpg');
+          }
+
+          &.bigrock {
+            background-image: url('../images/bigrock-logo.gif');
+          }
+
+          &.gibo {
+            background-image: url('../images/gibo-logo.png');
+          }
+
+          &.gafbo {
+            background-image: url('../images/gafbo-logo.png');
+          }
+
+          &.rod {
+            background-image: url('../images/rod-logo1.jpg');
+          }
+
+          &.httpx {
+            background-image: url('../images/httpx-logo.png');
+          }
+
+          &.word-up {
+            background-image: url('../images/wordup-logo-2015.png');
+          }
+
+          &.bluehost-blog {
+            background-image: url('../images/bluehost-blog-logo.png');
+          }
+
+          &.bigrock-blog {
+            background-image: url('../images/bigrock-blog-logo.gif');
+          }
+        }
+
+        .title {
+          background: rgba(0,0,0,0.8);
+          color: white;
+          position: absolute;
+          width: 100%;
+          padding: 0;
+          bottom: -45px;
+          @include transition(all 0.5s ease-in-out 0s);
+
+          p, span {
+            padding: 10px;
+          }
+        }
+
+        &:hover {
+          box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+
+          .title {
+            bottom: 0;
+          }
+        }
+
+      }
+    }
+  }
+}
 
 .switchWrp {
   position: absolute;
@@ -589,7 +635,7 @@ section {
     border-top: 1px solid #ccc;
 
     .fa {
-      font-size: $fontSize;
+      font-size: 38px;
       cursor: pointer;
       color: #434343;
       text-decoration: none;
