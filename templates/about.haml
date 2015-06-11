@@ -1,5 +1,5 @@
 .container.page.about-page
-  .row
+  .row.header
     .col-sm-12
       %h1.text-center{:'ng-class' => "{ 'animated fadeInDown' : animateTitle }"} ABOUT ME
 
@@ -34,75 +34,75 @@
       %h3 Skills
 
   .skills.row
-    .col-xs-12.col-sm-3{:'ng-controller' => "chartHtmlCtrl"}
+    .col-xs-6.col-sm-3{:'ng-controller' => "chartHtmlCtrl"}
       .title
         %span.txt HTML / HTML5
       %div.easypiechart{:easypiechart => '', :options => "options", :percent => "percent", :tooltip => "HTML / HTML5", :'tooltip-placement' => "top"}
         .icons.html5
 
-    .col-xs-12.col-sm-3{:'ng-controller' => "chartHamlCtrl"}
+    .col-xs-6.col-sm-3{:'ng-controller' => "chartHamlCtrl"}
       .title
         %span.txt Haml
       %div.easypiechart{:easypiechart => '', :options => "options", :percent => "percent", :tooltip => "Haml", :'tooltip-placement' => "top"}
         .icons.haml
 
-    .col-xs-12.col-sm-3{:'ng-controller' => "chartCssCtrl"}
+    .col-xs-6.col-sm-3{:'ng-controller' => "chartCssCtrl"}
       .title
         %span.txt CSS / CSS3
       %div.easypiechart{:easypiechart => '', :options => "options", :percent => "percent", :tooltip => "CSS / CSS3", :'tooltip-placement' => "top"}
         .icons.css3
 
-    .col-xs-12.col-sm-3{:'ng-controller' => "chartSassCtrl"}
+    .col-xs-6.col-sm-3{:'ng-controller' => "chartSassCtrl"}
       .title
         %span.txt Sass
       %div.easypiechart{:easypiechart => '', :options => "options", :percent => "percent", :tooltip => "Sass", :'tooltip-placement' => "top"}
         .icons.sass
 
   .skills.row
-    .col-xs-12.col-sm-3{:'ng-controller' => "chartJqueryCtrl"}
+    .col-xs-6.col-sm-3{:'ng-controller' => "chartJqueryCtrl"}
       .title
         %span.txt Jquery / Javascript
       %div.easypiechart{:easypiechart => '', :options => "options", :percent => "percent", :tooltip => "Jquery / Js", :'tooltip-placement' => "top"}
         .icons.jquery
 
-    .col-xs-12.col-sm-3{:'ng-controller' => "chartAngularCtrl"}
+    .col-xs-6.col-sm-3{:'ng-controller' => "chartAngularCtrl"}
       .title
         %span.txt AngularJs
       %div.easypiechart{:easypiechart => '', :options => "options", :percent => "percent", :tooltip => "AngularJs", :'tooltip-placement' => "top"}
         .icons.angular
 
-    .col-xs-12.col-sm-3{:'ng-controller' => "chartBackboneCtrl"}
+    .col-xs-6.col-sm-3{:'ng-controller' => "chartBackboneCtrl"}
       .title
         %span.txt Backbonejs
       %div.easypiechart{:easypiechart => '', :options => "options", :percent => "percent", :tooltip => "BackboneJs", :'tooltip-placement' => "top"}
         .icons.backbone
 
-    .col-xs-12.col-sm-3{:'ng-controller' => "chartPhpCtrl"}
+    .col-xs-6.col-sm-3{:'ng-controller' => "chartPhpCtrl"}
       .title
         %span.txt PHP
       %div.easypiechart{:easypiechart => '', :options => "options", :percent => "percent", :tooltip => "PHP", :'tooltip-placement' => "top"}
         .icons.php
 
   .skills.row
-    .col-xs-12.col-sm-3{:'ng-controller' => "chartMysqlCtrl"}
+    .col-xs-6.col-sm-3{:'ng-controller' => "chartMysqlCtrl"}
       %div.title
         %span.txt Mysql
       %div.easypiechart{:easypiechart => '', :options => "options", :percent => "percent", :tooltip => "Mysql", :'tooltip-placement' => "top"}
         .icons.mysql
 
-    .col-xs-12.col-sm-3{:'ng-controller' => "chartMongodbCtrl"}
+    .col-xs-6.col-sm-3{:'ng-controller' => "chartMongodbCtrl"}
       %div.title
         %span.txt MongoDb
       %div.easypiechart{:easypiechart => '', :options => "options", :percent => "percent", :tooltip => "MongoDb", :'tooltip-placement' => "top"}
         .icons.mongodb
 
-    .col-xs-12.col-sm-3{:'ng-controller' => "chartPhotoshopCtrl"}
+    .col-xs-6.col-sm-3{:'ng-controller' => "chartPhotoshopCtrl"}
       %div.title
         %span.txt Photoshop
       %div.easypiechart{:easypiechart => '', :options => "options", :percent => "percent", :tooltip => "Photoshop", :'tooltip-placement' => "top"}
         .icons.photoshop
 
-    .col-xs-12.col-sm-3{:'ng-controller' => "chartIllustratorCtrl"}
+    .col-xs-6.col-sm-3{:'ng-controller' => "chartIllustratorCtrl"}
       %div.title
         %span.txt Illustrator
       %div.easypiechart{:easypiechart => '', :options => "options", :percent => "percent", :tooltip => "Illustrator", :'tooltip-placement' => "top"}

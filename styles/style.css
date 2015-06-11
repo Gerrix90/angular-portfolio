@@ -628,15 +628,18 @@
   src: local("Roboto Medium"), local("Roboto-medium"), url("../fonts/Roboto-medium-latin-500.woff2") format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
 body {
-  font: 100 14px 'Roboto', helvetica, arial, sans-serif;
+  font: 400 14px 'Roboto', helvetica, arial, sans-serif;
   background: #e0e0e0; }
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+    body {
+      font: 100 14px 'Roboto', helvetica, arial, sans-serif; } }
   body header {
     height: 100%;
     width: 100%;
     display: block;
     position: relative; }
     body header.header-wrap {
-      background: url("../images/bg-img-workstation.JPG") no-repeat scroll 50% 0 #dddddd;
+      background: url("../images/bg-img-road.JPG") no-repeat scroll 50% 0 #dddddd;
       background-size: cover;
       color: white;
       position: fixed;
@@ -694,6 +697,9 @@ body {
       animation-iteration-count: initial;
       animation-fill-mode: forwards;
       /* this prevents the animation from restarting! */ }
+      @media screen and (min-width: 320px) and (max-width: 767px) {
+        body header .dpWrapper {
+          margin-top: 0; } }
       body header .dpWrapper img {
         width: 36%;
         border: 10px solid #fff;
@@ -729,6 +735,12 @@ body {
         animation-iteration-count: initial;
         animation-fill-mode: forwards;
         /* this prevents the animation from restarting! */ }
+        @media screen and (min-width: 320px) and (max-width: 767px) {
+          body header .dpWrapper img {
+            width: 76%; } }
+        @media screen and (max-width: 350px) {
+          body header .dpWrapper img {
+            width: 60%; } }
     body header .introMsgWrp {
       font-size: 30px;
       margin-top: 20px; }
@@ -767,6 +779,9 @@ body {
       font-size: 30px;
       font-size: 3.5vw;
       margin-top: 20px; }
+      @media screen and (min-width: 320px) and (max-width: 767px) {
+        body header .socialWrp-xs {
+          font-size: 30px; } }
     body header .introMsgWrp .fa, body header .socialWrp-xs .fa {
       display: inline-block;
       max-width: 100px;
@@ -781,9 +796,16 @@ body {
       -ms-transition: all 0.4s cubic-bezier(0.9, 0.16, 0.46, 1.92);
       -o-transition: all 0.4s cubic-bezier(0.9, 0.16, 0.46, 1.92);
       transition: all 0.4s cubic-bezier(0.9, 0.16, 0.46, 1.92); }
+      @media screen and (min-width: 320px) and (max-width: 767px) {
+        body header .introMsgWrp .fa, body header .socialWrp-xs .fa {
+          width: 56px;
+          height: 36px; } }
       body header .introMsgWrp .fa:hover, body header .socialWrp-xs .fa:hover {
         font-size: 40px;
         font-size: 4vw; }
+        @media screen and (min-width: 320px) and (max-width: 767px) {
+          body header .introMsgWrp .fa:hover, body header .socialWrp-xs .fa:hover {
+            font-size: 40px; } }
         body header .introMsgWrp .fa:hover.fa-facebook, body header .socialWrp-xs .fa:hover.fa-facebook {
           color: #3b5998;
           text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white; }
@@ -868,6 +890,14 @@ body {
     animation-iteration-count: initial;
     animation-fill-mode: forwards;
     /* this prevents the animation from restarting! */ }
+@media only screen and (min-width: 320px) and (max-width: 767px) and (max-height: 640px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 767px) and (max-height: 640px) and (min--moz-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 767px) and (max-height: 640px) and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-width: 320px) and (max-width: 767px) and (max-height: 640px) and (min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 767px) and (max-height: 640px) and (min-resolution: 192dpi), only screen and (min-width: 320px) and (max-width: 767px) and (max-height: 640px) and (min-resolution: 2dppx) {
+  body.about .navbar-custom, body.skills .navbar-custom, body.experience .navbar-custom, body.education .navbar-custom, body.portfolio .navbar-custom, body.contact .navbar-custom {
+    bottom: -2px; } }
+
+@media screen and (min-width: 320px) and (max-width: 767px) and (max-height: 480px) {
+  body.about .navbar-custom, body.skills .navbar-custom, body.experience .navbar-custom, body.education .navbar-custom, body.portfolio .navbar-custom, body.contact .navbar-custom {
+    bottom: -8px; } }
+
   body.error header {
     -webkit-animation-delay: 0s;
     -webkit-animation-duration: 0s;
@@ -905,6 +935,13 @@ body {
     animation-fill-mode: forwards;
     /* this prevents the animation from restarting! */ }
 
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .navbar-custom .navbar-nav {
+    margin-top: 1px;
+    margin-bottom: 1px; } }
+@media screen and (max-width: 350px) {
+  .navbar-custom .navbar-nav li a {
+    padding: 10px; } }
 .navbar-custom .container {
   margin-top: 30px; }
   .navbar-custom .container .navbar-header .icon-bar {
@@ -916,60 +953,64 @@ section {
   display: block;
   position: relative; }
 
+.row.header, .row.skills {
+  margin: 20px 0; }
+
 .view-animate-container {
   position: relative; }
   .view-animate-container .section-box {
     margin: 44px 0 0;
     position: relative;
     z-index: 1; }
-    .view-animate-container .section-box .page {
-      padding: 20px 0; }
-      .view-animate-container .section-box .page .text-content {
-        font-size: 22px;
-        margin: 20px 0; }
+    .view-animate-container .section-box .page .text-content {
+      font-size: 22px; }
 
 .about-page h3 {
   margin: 10px 0 25px 0; }
 .about-page h3:last-child {
   margin: 25px 0 0 0; }
-.about-page .row {
-  margin: 20px 0; }
-  .about-page .row div[class*="col-"] .title {
-    display: none; }
-  .about-page .row div[class*="col-"] .easypiechart {
-    text-align: center; }
-    .about-page .row div[class*="col-"] .easypiechart .icons {
-      position: absolute;
-      background: url("../images/ico-html5.png") no-repeat scroll center center transparent;
-      top: -4px;
-      bottom: 0;
-      left: 14px;
-      right: 15px;
-      background-size: 38px; }
-      .about-page .row div[class*="col-"] .easypiechart .icons.haml {
-        background-image: url("../images/ico-haml.png"); }
-      .about-page .row div[class*="col-"] .easypiechart .icons.css3 {
-        background-image: url("../images/ico-css3.png"); }
-      .about-page .row div[class*="col-"] .easypiechart .icons.sass {
-        background-image: url("../images/ico-sass.png"); }
-      .about-page .row div[class*="col-"] .easypiechart .icons.jquery {
-        background-image: url("../images/ico-jquery.png"); }
-      .about-page .row div[class*="col-"] .easypiechart .icons.angular {
-        background-image: url("../images/ico-angular.png"); }
-      .about-page .row div[class*="col-"] .easypiechart .icons.backbone {
-        background-image: url("../images/ico-backbone.png"); }
-      .about-page .row div[class*="col-"] .easypiechart .icons.php {
-        background-image: url("../images/ico-php.png"); }
-      .about-page .row div[class*="col-"] .easypiechart .icons.mysql {
-        background-image: url("../images/ico-mysql.png"); }
-      .about-page .row div[class*="col-"] .easypiechart .icons.mongodb {
-        background-image: url("../images/ico-mongodb.png"); }
-      .about-page .row div[class*="col-"] .easypiechart .icons.photoshop {
-        background-image: url("../images/ico-photoshop.png"); }
-      .about-page .row div[class*="col-"] .easypiechart .icons.illustrator {
-        background-image: url("../images/ico-ai.png"); }
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .about-page .row.skills {
+    margin: 0; } }
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .about-page .row.skills div[class*="col-"] {
+    margin: 20px 0; } }
+.about-page .row div[class*="col-"] .title {
+  display: none; }
+.about-page .row div[class*="col-"] .easypiechart {
+  text-align: center; }
+  .about-page .row div[class*="col-"] .easypiechart .icons {
+    position: absolute;
+    background: url("../images/ico-html5.png") no-repeat scroll center center transparent;
+    top: -4px;
+    bottom: 0;
+    left: 14px;
+    right: 15px;
+    background-size: 38px; }
+    .about-page .row div[class*="col-"] .easypiechart .icons.haml {
+      background-image: url("../images/ico-haml.png"); }
+    .about-page .row div[class*="col-"] .easypiechart .icons.css3 {
+      background-image: url("../images/ico-css3.png"); }
+    .about-page .row div[class*="col-"] .easypiechart .icons.sass {
+      background-image: url("../images/ico-sass.png"); }
+    .about-page .row div[class*="col-"] .easypiechart .icons.jquery {
+      background-image: url("../images/ico-jquery.png"); }
+    .about-page .row div[class*="col-"] .easypiechart .icons.angular {
+      background-image: url("../images/ico-angular.png"); }
+    .about-page .row div[class*="col-"] .easypiechart .icons.backbone {
+      background-image: url("../images/ico-backbone.png"); }
+    .about-page .row div[class*="col-"] .easypiechart .icons.php {
+      background-image: url("../images/ico-php.png"); }
+    .about-page .row div[class*="col-"] .easypiechart .icons.mysql {
+      background-image: url("../images/ico-mysql.png"); }
+    .about-page .row div[class*="col-"] .easypiechart .icons.mongodb {
+      background-image: url("../images/ico-mongodb.png"); }
+    .about-page .row div[class*="col-"] .easypiechart .icons.photoshop {
+      background-image: url("../images/ico-photoshop.png"); }
+    .about-page .row div[class*="col-"] .easypiechart .icons.illustrator {
+      background-image: url("../images/ico-ai.png"); }
 .about-page .iconsWrp {
-  margin-top: -26px; }
+  margin-top: -10px; }
   .about-page .iconsWrp .icons {
     text-align: center;
     background-size: contain;
@@ -985,6 +1026,12 @@ section {
   margin-top: 30px; }
   .portfolio-page .portfolioWrp .row {
     margin: 20px; }
+    @media screen and (min-width: 320px) and (max-width: 767px) {
+      .portfolio-page .portfolioWrp .row {
+        margin: 0; } }
+    @media screen and (min-width: 320px) and (max-width: 767px) {
+      .portfolio-page .portfolioWrp .row div[class*="col-"] {
+        margin: 10px 0; } }
     .portfolio-page .portfolioWrp .row .box {
       position: relative;
       overflow: hidden;
@@ -1167,6 +1214,13 @@ section {
       transition-duration: 0.3s;
       -webkit-transition-property: transform;
       transition-property: transform; }
+      @media screen and (min-width: 320px) and (max-width: 767px) {
+        .contactWrp .socialWrp .fa {
+          margin: 10px 15px; } }
+      @media screen and (max-width: 350px) {
+        .contactWrp .socialWrp .fa {
+          margin: 14px;
+          font-size: 30px; } }
       .contactWrp .socialWrp .fa:after {
         pointer-events: none;
         position: absolute;

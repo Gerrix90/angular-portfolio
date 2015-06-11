@@ -34,7 +34,10 @@
 }
 
 body {
-  font: 100 14px 'Roboto', helvetica, arial, sans-serif;
+  font: 400 14px 'Roboto', helvetica, arial, sans-serif;
+  @include retina {
+    font: 100 14px 'Roboto', helvetica, arial, sans-serif;
+  }
   background: lighten($bgColor, 1);
   header {
     height: 100%;
@@ -43,7 +46,7 @@ body {
     position: relative;
 
     &.header-wrap {
-      background: url('../images/bg-img-workstation.JPG') no-repeat scroll 50% 0 #dddddd;
+      background: url('../images/bg-img-road.JPG') no-repeat scroll 50% 0 #dddddd;
       background-size: cover;
       color: white;
       position: fixed;
@@ -81,10 +84,19 @@ body {
 
     .dpWrapper {
       margin-top: 20px;
+      @include small-devices {
+        margin-top: 0;
+      }
       @include animation(0s, 3s);
 
       img {
         width: 36%;
+        @include small-devices {
+          width: 76%;
+        }
+        @include max-width(350px) {
+          width: 60%;
+        }
         border: 10px solid #fff;
         border-radius: 100%;
         max-width: 300px;
@@ -161,6 +173,9 @@ body {
       font-size: 30px;
       font-size: 3.5vw;
       margin-top: 20px;
+      @include small-devices {
+        font-size: 30px;
+      }
     }
 
     .introMsgWrp, .socialWrp-xs {
@@ -169,6 +184,10 @@ body {
         max-width: 100px;
         width: 100px;
         height: 50px;
+        @include small-devices {
+          width: 56px;
+          height: 36px;
+        }
         text-decoration: none;
         margin: 15px auto;
         vertical-align: middle;
@@ -177,6 +196,9 @@ body {
         &:hover {
           font-size: 40px;
           font-size: 4vw;
+          @include small-devices {
+            font-size: 40px;
+          }
 
           &.fa-facebook {
             color: #3b5998;
@@ -217,6 +239,20 @@ body {
       @include animation(0s, 1s, slideUpHeader);
     }
 
+    .navbar-custom {
+      @include small-devices {
+
+        @include max-height(640px) {
+          @include retina {
+            bottom: -2px;
+          }
+        }
+        @include max-height(480px) {
+          bottom: -8px;
+        }
+      }
+    }
+
   }
 
   &.error {
@@ -231,6 +267,21 @@ body {
 
 .navbar-custom {
 
+  .navbar-nav {
+    @include small-devices {
+      margin-top: 1px;
+      margin-bottom: 1px;
+    }
+
+    li {
+      a {
+        @include max-width(350px) {
+          padding: 10px;
+        }
+      }
+    }
+  }
+
   .container {
     margin-top: 30px;
 
@@ -238,9 +289,7 @@ body {
       .icon-bar {
         background: #ffffff;
       }
-
     }
-
   }
 }
 
@@ -249,6 +298,12 @@ section {
   width: 100%;
   display: block;
   position: relative;
+}
+
+.row {
+  &.header, &.skills {
+    margin: 20px 0;
+  }
 }
 
 .view-animate-container {
@@ -260,11 +315,11 @@ section {
     z-index: 1;
 
     .page {
-      padding: 20px 0;
+      //padding: 20px 0;
 
       .text-content {
         font-size: $fontSize;
-        margin: 20px 0;
+        //margin: 20px 0;
       }
 
     }
@@ -284,11 +339,23 @@ section {
   }
 
   .row {
-    margin: 20px 0;
+
+    &.skills {
+      @include small-devices {
+        margin: 0;
+      }
+
+      div[class*="col-"] {
+        @include small-devices {
+          margin: 20px 0;
+        }
+      }
+    }
+
 
     div[class*="col-"] {
-      .title {
 
+      .title {
         display: none;
       }
 
@@ -353,7 +420,7 @@ section {
   }
 
   .iconsWrp {
-    margin-top: -26px;
+    margin-top: -10px;
 
     .icons {
       text-align: center;
@@ -379,6 +446,15 @@ section {
 
     .row {
       margin: 20px;
+      @include small-devices {
+        margin: 0;
+      }
+
+      div[class*="col-"] {
+        @include small-devices {
+          margin: 10px 0;
+        }
+      }
 
       .box {
         position: relative;
@@ -640,6 +716,13 @@ section {
       color: #434343;
       text-decoration: none;
       margin: 10px 20px;
+      @include small-devices {
+        margin: 10px 15px;
+      }
+      @include max-width(350px) {
+        margin: 14px;
+        font-size: 30px;
+      }
       display: inline-block;
       vertical-align: middle;
       -webkit-transform: translateZ(0);
