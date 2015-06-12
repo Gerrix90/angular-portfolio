@@ -7,7 +7,7 @@
   %meta{:name => "apple-mobile-web-app-capable", :content => "yes"}
   %meta{:name => "abstract", :content => "Shalom Sam's online protfolio."}
   %meta{:name => "description", :content => "Hi, I'am Shalom Sam, a web developer based out of Mumbai, India. With wast skillset in both front-end and backend."}
-  %meta{:name => "keywords", :content => "Shalom Sam, Shalom, Sam, web developer, web, developer, front-end developer, backend developer, front-end, backend, html5, html, css, css3, javascript, jquery, angularjs, backbone, php, mysql, mongodb"}
+  %meta{:name => "keywords", :content => "Shalom Sam, Shalom, Sam, web developer, web, developer, front-end developer, backend developer, front-end, front, end, back, frontend, backend, front end, back end, back-end, html5, html, css, css3, javascript, jquery, angularjs, backbone, php, mysql, mongodb"}
   %meta{:name => "author", :context => "Shalom Sam"}
   %base{:href => "/"}
   <!-- Latest compiled and minified CSS -->
@@ -16,7 +16,6 @@
   %link{:rel => "stylesheet", :href => "styles/fonts.css"}
   %link{:rel => "stylesheet", :href => "styles/style.css"}
   %link{:rel => "stylesheet", :href => "styles/animate.css"}
-  -#%link{:rel => "stylesheet", :href => "http://fonts.googleapis.com/css?family=Montserrat"}
 
   %script{:type => "text/javascript", :src => "bower_components/angular/angular.min.js"}
   %script{:type => "text/javascript", :src => "bower_components/angular-route/angular-route.min.js"}
@@ -74,12 +73,13 @@
       .container-fluid.navbar.navbar-custom.navbar-fixed-bottom.navbar-inverse.nav-wrap.bottom
         .navbar-header
           %a.navbar-brand.hidden Shalom Sam
-          %button.navbar-toggle{:"ng-click" => "isCollapsed2 = !isCollapsed2"}
-            %span.sr-only Toggle navigation
-            %span.icon-bar
-            %span.icon-bar
-            %span.icon-bar
-        %nav.navbar-collapse.collapse{:collapse => "isCollapsed2"}
+          -#%button.navbar-toggle{:"ng-click" => "isCollapsed2 = !isCollapsed2"}
+          -#  %span.sr-only Toggle navigation
+          -#  %span.icon-bar
+          -#  %span.icon-bar
+          -#  %span.icon-bar
+          -#  navbar-collapse.collapse{:collapse => "isCollapsed2"}
+        %nav
           %ul{:class => "nav navbar-nav nav-main"}
             %li{"ng-class" => "{ active: isActive('/') }"}
               %a{:href => "/"} HOME

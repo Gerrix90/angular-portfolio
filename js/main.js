@@ -150,6 +150,7 @@ portfolioApp.controller('ContactController', function($rootScope, $scope) {
     $rootScope.pageClass = "contact";
     $rootScope.headerAnimated = true;
     $scope.animateTitle = true;
+    $scope.textAnimate = true;
 });
 
 portfolioApp.controller('ErrorController', function($rootScope) {

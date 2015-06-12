@@ -40,6 +40,10 @@ body {
   }
   background: lighten($bgColor, 1);
   header {
+    @include small-devices {
+      -webkit-transform-style: preserve-3d;
+      -webkit-backface-visibility: hidden;
+    }
     height: 100%;
     width: 100%;
     display: block;
@@ -84,6 +88,12 @@ body {
 
     .dpWrapper {
       margin-top: 20px;
+      @include min-height(800px) {
+        margin-top: 14%;
+      }
+      @include min-height(1200px) {
+        margin-top: 33%;
+      }
       @include small-devices {
         margin-top: 0;
       }
@@ -92,7 +102,7 @@ body {
       img {
         width: 36%;
         @include small-devices {
-          width: 76%;
+          width: 70%;
         }
         @include max-width(350px) {
           width: 60%;
@@ -239,20 +249,6 @@ body {
       @include animation(0s, 1s, slideUpHeader);
     }
 
-    .navbar-custom {
-      @include small-devices {
-
-        @include max-height(640px) {
-          @include retina {
-            bottom: -2px;
-          }
-        }
-        @include max-height(480px) {
-          bottom: -8px;
-        }
-      }
-    }
-
   }
 
   &.error {
@@ -267,18 +263,29 @@ body {
 
 .navbar-custom {
 
+  @include small-devices {
+    min-height: inherit;
+
+    @include max-height(640px) {
+      @include retina {
+        bottom: -2px;
+      }
+    }
+  }
+
+  li > a {
+    @include small-devices {
+      padding: 15px;
+      @include max-width(350px) {
+        padding: 10px;
+      }
+    }
+  }
+
   .navbar-nav {
     @include small-devices {
       margin-top: 1px;
       margin-bottom: 1px;
-    }
-
-    li {
-      a {
-        @include max-width(350px) {
-          padding: 10px;
-        }
-      }
     }
   }
 
@@ -303,6 +310,13 @@ section {
 .row {
   &.header, &.skills {
     margin: 20px 0;
+
+    h1 {
+      margin: 15px 0;
+      @include small-devices {
+        margin: 0;
+      }
+    }
   }
 }
 
@@ -327,7 +341,10 @@ section {
   }
 }
 
-
+.animated {
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+}
 
 .about-page {
   h3 {
@@ -420,7 +437,8 @@ section {
   }
 
   .iconsWrp {
-    margin-top: -10px;
+    margin-top: 15px;
+    margin-bottom: 50px;
 
     .icons {
       text-align: center;
@@ -429,6 +447,10 @@ section {
       height: 100px;
       margin: 5px;
       text-indent: -99999px;
+
+      span {
+        position: absolute;
+      }
 
       img {
         height: 100%;
@@ -443,6 +465,7 @@ section {
 
   .portfolioWrp {
     margin-top: 30px;
+    margin-bottom: 40px;
 
     .row {
       margin: 20px;
@@ -568,26 +591,49 @@ section {
 
   &.active {
     height: 100%;
-    @include transition(all 5s ease-in);
     @include opacity(1);
 
     .case {
       height: 100%;
+      .template {
+        @extend .case;
+
+        .subPage {
+          @include small-devices {
+            -webkit-transform-style: preserve-3d;
+            -webkit-backface-visibility: hidden;
+          }
+        }
+      }
     }
   }
 
   .case {
 
-
     .template {
 
       &.ng-enter, &.ng-leave {
+        @include transition(5s linear all);
 
+        .subPage {
+          width: 100%;
+          @include transition(all 1s cubic-bezier(0.68, 0.01, 0.71, 1.43));
+          transform: translate3d(100%, 0, 0)
+        }
       }
 
-      &.ng-enter  .ng-enter-active {
-
+      &.ng-enter {
+        z-index: 100;
       }
+
+      &.ng-enter.ng-enter-active {
+
+        .subPage {
+          transform: translate3d(0,0,0);
+        }
+      }
+
+
     }
 
 
@@ -606,6 +652,7 @@ section {
     padding-top: 15px;
     padding-bottom: 15px;
     border-bottom: 4px solid #cccccc;
+    font-size: 16px;
 
     .title {
       font-weight: 400;
@@ -614,10 +661,14 @@ section {
 }
 
 .subPageContent {
+  color: lighten($fontColor, 8);
+  @include retina {
+    color: lighten($fontColor, 2);
+  }
 
   img {
     margin: 40px auto;
-    min-height: 100px;
+    //min-height: 100px;
   }
 
 }
@@ -641,14 +692,22 @@ section {
         background-color: white;
         top: -14px;
         position: relative;
-        font-weight: 400;
+        font-weight: 500;
+        @include retina {
+          font-weight: 400;
+        }
         font-size: 20px;
+        color: $fontColor;
       }
     }
   }
 
   .btnWrp {
     margin: 25px 0;
+  }
+
+  .para {
+
   }
 
   .infoWrp {
@@ -659,7 +718,11 @@ section {
       min-height: 100px;
 
       .title {
-        font-weight: 400;
+        font-weight: 500;
+        color: $fontColor;
+        @include retina {
+          font-weight: 400;
+        }
       }
     }
 

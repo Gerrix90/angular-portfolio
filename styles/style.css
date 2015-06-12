@@ -638,6 +638,10 @@ body {
     width: 100%;
     display: block;
     position: relative; }
+    @media screen and (min-width: 320px) and (max-width: 767px) {
+      body header {
+        -webkit-transform-style: preserve-3d;
+        -webkit-backface-visibility: hidden; } }
     body header.header-wrap {
       background: url("../images/bg-img-road.JPG") no-repeat scroll 50% 0 #dddddd;
       background-size: cover;
@@ -697,6 +701,12 @@ body {
       animation-iteration-count: initial;
       animation-fill-mode: forwards;
       /* this prevents the animation from restarting! */ }
+      @media screen and (min-height: 800px) {
+        body header .dpWrapper {
+          margin-top: 14%; } }
+      @media screen and (min-height: 1200px) {
+        body header .dpWrapper {
+          margin-top: 33%; } }
       @media screen and (min-width: 320px) and (max-width: 767px) {
         body header .dpWrapper {
           margin-top: 0; } }
@@ -737,7 +747,7 @@ body {
         /* this prevents the animation from restarting! */ }
         @media screen and (min-width: 320px) and (max-width: 767px) {
           body header .dpWrapper img {
-            width: 76%; } }
+            width: 70%; } }
         @media screen and (max-width: 350px) {
           body header .dpWrapper img {
             width: 60%; } }
@@ -890,14 +900,6 @@ body {
     animation-iteration-count: initial;
     animation-fill-mode: forwards;
     /* this prevents the animation from restarting! */ }
-@media only screen and (min-width: 320px) and (max-width: 767px) and (max-height: 640px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 767px) and (max-height: 640px) and (min--moz-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 767px) and (max-height: 640px) and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-width: 320px) and (max-width: 767px) and (max-height: 640px) and (min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 767px) and (max-height: 640px) and (min-resolution: 192dpi), only screen and (min-width: 320px) and (max-width: 767px) and (max-height: 640px) and (min-resolution: 2dppx) {
-  body.about .navbar-custom, body.skills .navbar-custom, body.experience .navbar-custom, body.education .navbar-custom, body.portfolio .navbar-custom, body.contact .navbar-custom {
-    bottom: -2px; } }
-
-@media screen and (min-width: 320px) and (max-width: 767px) and (max-height: 480px) {
-  body.about .navbar-custom, body.skills .navbar-custom, body.experience .navbar-custom, body.education .navbar-custom, body.portfolio .navbar-custom, body.contact .navbar-custom {
-    bottom: -8px; } }
-
   body.error header {
     -webkit-animation-delay: 0s;
     -webkit-animation-duration: 0s;
@@ -936,12 +938,23 @@ body {
     /* this prevents the animation from restarting! */ }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
+  .navbar-custom {
+    min-height: inherit; } }
+@media only screen and (min-width: 320px) and (max-width: 767px) and (max-height: 640px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 767px) and (max-height: 640px) and (min--moz-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 767px) and (max-height: 640px) and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-width: 320px) and (max-width: 767px) and (max-height: 640px) and (min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 767px) and (max-height: 640px) and (min-resolution: 192dpi), only screen and (min-width: 320px) and (max-width: 767px) and (max-height: 640px) and (min-resolution: 2dppx) {
+  .navbar-custom {
+    bottom: -2px; } }
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .navbar-custom li > a {
+    padding: 15px; } }
+  @media screen and (min-width: 320px) and (max-width: 767px) and (max-width: 350px) {
+    .navbar-custom li > a {
+      padding: 10px; } }
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
   .navbar-custom .navbar-nav {
     margin-top: 1px;
     margin-bottom: 1px; } }
-@media screen and (max-width: 350px) {
-  .navbar-custom .navbar-nav li a {
-    padding: 10px; } }
 .navbar-custom .container {
   margin-top: 30px; }
   .navbar-custom .container .navbar-header .icon-bar {
@@ -955,6 +968,11 @@ section {
 
 .row.header, .row.skills {
   margin: 20px 0; }
+  .row.header h1, .row.skills h1 {
+    margin: 15px 0; }
+    @media screen and (min-width: 320px) and (max-width: 767px) {
+      .row.header h1, .row.skills h1 {
+        margin: 0; } }
 
 .view-animate-container {
   position: relative; }
@@ -964,6 +982,10 @@ section {
     z-index: 1; }
     .view-animate-container .section-box .page .text-content {
       font-size: 22px; }
+
+.animated {
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden; }
 
 .about-page h3 {
   margin: 10px 0 25px 0; }
@@ -1010,7 +1032,8 @@ section {
     .about-page .row div[class*="col-"] .easypiechart .icons.illustrator {
       background-image: url("../images/ico-ai.png"); }
 .about-page .iconsWrp {
-  margin-top: -10px; }
+  margin-top: 15px;
+  margin-bottom: 50px; }
   .about-page .iconsWrp .icons {
     text-align: center;
     background-size: contain;
@@ -1018,12 +1041,15 @@ section {
     height: 100px;
     margin: 5px;
     text-indent: -99999px; }
+    .about-page .iconsWrp .icons span {
+      position: absolute; }
     .about-page .iconsWrp .icons img {
       height: 100%;
       display: block; }
 
 .portfolio-page .portfolioWrp {
-  margin-top: 30px; }
+  margin-top: 30px;
+  margin-bottom: 40px; }
   .portfolio-page .portfolioWrp .row {
     margin: 20px; }
     @media screen and (min-width: 320px) and (max-width: 767px) {
@@ -1112,17 +1138,35 @@ section {
   opacity: 0; }
   .switchWrp.active {
     height: 100%;
-    -webkit-transition: all 5s ease-in;
-    -moz-transition: all 5s ease-in;
-    /*noinspection CssUnknownProperty*/
-    -ms-transition: all 5s ease-in;
-    -o-transition: all 5s ease-in;
-    transition: all 5s ease-in;
     -ms-opacity: 1;
     filter: opacity(100);
     opacity: 1; }
-    .switchWrp.active .case {
+    .switchWrp.active .case, .switchWrp.active .case .template {
       height: 100%; }
+      @media screen and (min-width: 320px) and (max-width: 767px) {
+        .switchWrp.active .case .template .subPage {
+          -webkit-transform-style: preserve-3d;
+          -webkit-backface-visibility: hidden; } }
+  .switchWrp .case .template.ng-enter, .switchWrp .case .template.ng-leave {
+    -webkit-transition: 5s linear all;
+    -moz-transition: 5s linear all;
+    /*noinspection CssUnknownProperty*/
+    -ms-transition: 5s linear all;
+    -o-transition: 5s linear all;
+    transition: 5s linear all; }
+    .switchWrp .case .template.ng-enter .subPage, .switchWrp .case .template.ng-leave .subPage {
+      width: 100%;
+      -webkit-transition: all 1s cubic-bezier(0.68, 0.01, 0.71, 1.43);
+      -moz-transition: all 1s cubic-bezier(0.68, 0.01, 0.71, 1.43);
+      /*noinspection CssUnknownProperty*/
+      -ms-transition: all 1s cubic-bezier(0.68, 0.01, 0.71, 1.43);
+      -o-transition: all 1s cubic-bezier(0.68, 0.01, 0.71, 1.43);
+      transition: all 1s cubic-bezier(0.68, 0.01, 0.71, 1.43);
+      transform: translate3d(100%, 0, 0); }
+  .switchWrp .case .template.ng-enter {
+    z-index: 100; }
+  .switchWrp .case .template.ng-enter.ng-enter-active .subPage {
+    transform: translate3d(0, 0, 0); }
 
 .subPage {
   padding-top: 0;
@@ -1133,13 +1177,18 @@ section {
     background: white;
     padding-top: 15px;
     padding-bottom: 15px;
-    border-bottom: 4px solid #cccccc; }
+    border-bottom: 4px solid #cccccc;
+    font-size: 16px; }
     .subPage .subHeader .title {
       font-weight: 400; }
 
-.subPageContent img {
-  margin: 40px auto;
-  min-height: 100px; }
+.subPageContent {
+  color: #575757; }
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+    .subPageContent {
+      color: #484848; } }
+  .subPageContent img {
+    margin: 40px auto; }
 
 .introWrp, .snapshotWrp {
   font-size: 18px; }
@@ -1157,8 +1206,12 @@ section {
         background-color: white;
         top: -14px;
         position: relative;
-        font-weight: 400;
-        font-size: 20px; }
+        font-weight: 500;
+        font-size: 20px;
+        color: #434343; }
+        @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+          .introWrp .titleWrp .title span, .snapshotWrp .titleWrp .title span {
+            font-weight: 400; } }
   .introWrp .btnWrp, .snapshotWrp .btnWrp {
     margin: 25px 0; }
   .introWrp .infoWrp, .snapshotWrp .infoWrp {
@@ -1166,7 +1219,11 @@ section {
     .introWrp .infoWrp .platformWrp, .introWrp .infoWrp .roleWrp, .snapshotWrp .infoWrp .platformWrp, .snapshotWrp .infoWrp .roleWrp {
       min-height: 100px; }
       .introWrp .infoWrp .platformWrp .title, .introWrp .infoWrp .roleWrp .title, .snapshotWrp .infoWrp .platformWrp .title, .snapshotWrp .infoWrp .roleWrp .title {
-        font-weight: 400; }
+        font-weight: 500;
+        color: #434343; }
+        @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+          .introWrp .infoWrp .platformWrp .title, .introWrp .infoWrp .roleWrp .title, .snapshotWrp .infoWrp .platformWrp .title, .snapshotWrp .infoWrp .roleWrp .title {
+            font-weight: 400; } }
     .introWrp .infoWrp .platformWrp .platforms, .snapshotWrp .infoWrp .platformWrp .platforms {
       overflow: hidden;
       padding: 0;

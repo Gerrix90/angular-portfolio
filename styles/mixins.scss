@@ -1,6 +1,7 @@
 // Variables
 $bgColor: #dddddd;
 $boxBorder: #c3cad3;
+$fontColor: #434343;
 $fontSize: 22px;
 $screen-xs-min: 320px;
 $screen-xs-max: 480px;
@@ -18,12 +19,12 @@ $screen-lg-min: 1220px;
 }
 
 @mixin transition($prop) {
-  -webkit-transition: unquote($prop);
-  -moz-transition: unquote($prop);
+  -webkit-transition: #{$prop};
+  -moz-transition: #{$prop};
   /*noinspection CssUnknownProperty*/
-  -ms-transition: unquote($prop);
-  -o-transition: unquote($prop);
-  transition: unquote($prop);
+  -ms-transition: #{$prop};
+  -o-transition: #{$prop};
+  transition: #{$prop};
 }
 
 @mixin opacity($val) {
@@ -34,19 +35,19 @@ $screen-lg-min: 1220px;
 
 @mixin keyframe ($animation_name) {
 
-  @-webkit-keyframes $animation_name {
+  @-webkit-keyframes #{$animation_name} {
     @content;
   }
 
-  @-moz-keyframes $animation_name {
+  @-moz-keyframes #{$animation_name} {
     @content;
   }
 
-  @-o-keyframes $animation_name {
+  @-o-keyframes #{$animation_name} {
     @content;
   }
 
-  @keyframes $animation_name {
+  @keyframes #{$animation_name} {
     @content;
   }
 }
@@ -59,38 +60,38 @@ $screen-lg-min: 1220px;
 @mixin animation ($delay, $duration, $animation:"", $timingFunction:"ease", $fillMode:"forwards", $iterationCount:"initial") {
   -webkit-animation-delay: $delay;
   -webkit-animation-duration: $duration;
-  -webkit-animation-timing-function: unquote($timingFunction);
-  -webkit-animation-name: unquote($animation);
-  -webkit-animation-iteration-count: unquote($iterationCount);
-  -webkit-animation-fill-mode: unquote($fillMode); /* this prevents the animation from restarting! */
+  -webkit-animation-timing-function: #{$timingFunction};
+  -webkit-animation-name: #{$animation};
+  -webkit-animation-iteration-count: #{$iterationCount};
+  -webkit-animation-fill-mode: #{$fillMode}; /* this prevents the animation from restarting! */
 
   -moz-animation-delay: $delay;
   -moz-animation-duration: $duration;
-  -moz-animation-timing-function: unquote($timingFunction);
-  -moz-animation-name: unquote($animation);
-  -moz-animation-iteration-count: unquote($iterationCount);
-  -moz-animation-fill-mode: unquote($fillMode); /* this prevents the animation from restarting! */
+  -moz-animation-timing-function: #{$timingFunction};
+  -moz-animation-name: #{$animation};
+  -moz-animation-iteration-count: #{$iterationCount};
+  -moz-animation-fill-mode: #{$fillMode}; /* this prevents the animation from restarting! */
 
   -o-animation-delay: $delay;
   -o-animation-duration: $duration;
-  -o-animation-timing-function: unquote($timingFunction);
-  -o-animation-name: unquote($animation);
-  -o-animation-iteration-count: unquote($iterationCount);
-  -o-animation-fill-mode: unquote($fillMode); /* this prevents the animation from restarting! */
+  -o-animation-timing-function: #{$timingFunction};
+  -o-animation-name: #{$animation};
+  -o-animation-iteration-count: #{$iterationCount};
+  -o-animation-fill-mode: #{$fillMode}; /* this prevents the animation from restarting! */
 
   -ms-animation-delay: $delay;
   -ms-animation-duration: $duration;
-  -ms-animation-timing-function: unquote($timingFunction);
-  -ms-animation-name: unquote($animation);
-  -ms-animation-iteration-count: unquote($iterationCount);
-  -ms-animation-fill-mode: unquote($fillMode); /* this prevents the animation from restarting! */
+  -ms-animation-timing-function: #{$timingFunction};
+  -ms-animation-name: #{$animation};
+  -ms-animation-iteration-count: #{$iterationCount};
+  -ms-animation-fill-mode: #{$fillMode}; /* this prevents the animation from restarting! */
 
   animation-delay: $delay;
   animation-duration: $duration;
-  animation-timing-function: unquote($timingFunction);
-  animation-name: unquote($animation);
-  animation-iteration-count: unquote($iterationCount);
-  animation-fill-mode: unquote($fillMode); /* this prevents the animation from restarting! */
+  animation-timing-function: #{$timingFunction};
+  animation-name: #{$animation};
+  animation-iteration-count: #{$iterationCount};
+  animation-fill-mode: #{$fillMode}; /* this prevents the animation from restarting! */
 }
 
 @mixin screen ($min, $max, $orientation:false) {
