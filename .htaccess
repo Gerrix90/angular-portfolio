@@ -1,5 +1,9 @@
 RewriteEngine on
 
+# setting prefered domain (Google)
+RewriteCond %{HTTP_HOST} ^www.YourDomain.com$ [NC]
+RewriteRule ^(.*)$ http://YourDomain.com/$1 [R=301,L]
+
 # Don't rewrite files or directories
 RewriteCond %{REQUEST_FILENAME} -f [OR]
 RewriteCond %{REQUEST_FILENAME} -d
