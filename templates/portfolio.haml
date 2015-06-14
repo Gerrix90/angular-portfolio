@@ -6,6 +6,15 @@
 
   .portfolioWrp
     .row
+
+      .col-xs-12.col-sm-4
+        %a.box{:href => "/portfolio/coreframework"}
+          .logoWrp
+            .brandLogo.coreframework
+
+          .title
+            %p Core Framework
+
       .col-xs-12.col-sm-4
         %a.box{:href => "/portfolio/being-desi"}
           .logoWrp
@@ -22,6 +31,9 @@
           .title
             %p Hostgator
 
+
+    .row
+
       .col-xs-12.col-sm-4
         %a.box{:href => "/portfolio/bluehost"}
           .logoWrp
@@ -30,7 +42,7 @@
           .title
             %p Bluehost
 
-    .row
+
       .col-xs-12.col-sm-4
         %a.box{:href => "/portfolio/bigrock"}
           .logoWrp
@@ -47,6 +59,9 @@
           .title
             %p Gibo
 
+
+    .row
+
       .col-xs-12.col-sm-4
         %a.box{:href => "/portfolio/gafbo"}
           .logoWrp
@@ -55,7 +70,7 @@
           .title
             %p Gafbo
 
-    .row
+
       .col-xs-12.col-sm-4
         %a.box{:href => "/portfolio/rod"}
           .logoWrp
@@ -72,13 +87,6 @@
           .title
             %p HttpX
 
-      .col-xs-12.col-sm-4
-        %a.box{:href => "/portfolio/word-up"}
-          .logoWrp
-            .brandLogo.word-up
-
-          .title
-            %p Word-up
 
     .row
       .col-xs-12.col-sm-4
@@ -97,11 +105,15 @@
           .title
             %p Bigrock blog
 
-      -#.col-xs-12.col-sm-4
-      -#  .box
-      -#    .brandLogo
-      -#
-      -#    .title Hostgator blog
+
+      .col-xs-12.col-sm-4
+        %a.box{:href => "/portfolio/word-up"}
+          .logoWrp
+            .brandLogo.word-up
+
+          .title
+            %p Word-up
+
 
 
 
@@ -110,6 +122,9 @@
 -#%ng-include{:src => " includeFile ", :class => 'subPageWrp', :'ng-class' => "{active: includeFile != '' }"}
 
 .switchWrp{:'ng-switch' => '', :on => "subPage", :'ng-class' => "{active: animateSubPage}"}
+  .case{'ng-switch-when' => "coreframework"}
+    .template{:'ng-include' => "'templates/partials/coreframework.html'"}
+
   .case{'ng-switch-when' => "being-desi"}
     .template{:'ng-include' => "'templates/partials/being-desi.html'"}
 

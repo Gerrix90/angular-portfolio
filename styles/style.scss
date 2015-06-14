@@ -259,6 +259,10 @@ body {
 
   }
 
+  .btn-disabled {
+    background: #434343;
+  }
+
 }
 
 .navbar-custom {
@@ -510,6 +514,10 @@ section {
           background-position-x: 50%;
           background-repeat: no-repeat;
 
+          &.coreframework {
+            background-image: url('../images/coreFramework-01.png');
+          }
+
           &.being-desi {
             background-image: url('../images/beingdesi-logo.png');
           }
@@ -532,6 +540,7 @@ section {
 
           &.gafbo {
             background-image: url('../images/gafbo-logo.png');
+            background-size: 87px;
           }
 
           &.rod {

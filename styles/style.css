@@ -936,6 +936,8 @@ body {
     animation-iteration-count: initial;
     animation-fill-mode: forwards;
     /* this prevents the animation from restarting! */ }
+  body .btn-disabled {
+    background: #434343; }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .navbar-custom {
@@ -1086,6 +1088,8 @@ section {
         background-position-y: 50%;
         background-position-x: 50%;
         background-repeat: no-repeat; }
+        .portfolio-page .portfolioWrp .row .box .brandLogo.coreframework {
+          background-image: url("../images/coreFramework-01.png"); }
         .portfolio-page .portfolioWrp .row .box .brandLogo.being-desi {
           background-image: url("../images/beingdesi-logo.png"); }
         .portfolio-page .portfolioWrp .row .box .brandLogo.hostgator {
@@ -1097,7 +1101,8 @@ section {
         .portfolio-page .portfolioWrp .row .box .brandLogo.gibo {
           background-image: url("../images/gibo-logo.png"); }
         .portfolio-page .portfolioWrp .row .box .brandLogo.gafbo {
-          background-image: url("../images/gafbo-logo.png"); }
+          background-image: url("../images/gafbo-logo.png");
+          background-size: 87px; }
         .portfolio-page .portfolioWrp .row .box .brandLogo.rod {
           background-image: url("../images/rod-logo1.jpg"); }
         .portfolio-page .portfolioWrp .row .box .brandLogo.httpx {

@@ -1,0 +1,59 @@
+.subPage.bluehost-blog.animated
+  .subHeader.container-fluid
+    .row
+      .col-xs-3
+        %a{:href => "/portfolio"} < back
+
+      .col-xs-6.text-center
+        %span.title Core Framework
+
+      .col-xs-3
+
+
+  .subPageContent.container
+    .row
+      .col-xs-12.logoWrp.text-center
+        %img.img-responsive{:src => "../images/coreFramework-01.png"}
+
+
+    .row
+      .col-sm-12.introWrp
+        .titleWrp.text-center
+          %p.title
+            %span Overview
+
+        %p.para.text-justify
+          CoreFramework is a php web application framework that I build in my free-time. This was a self undertaking to understand php little better and also to understand what goes into an MVC framework. This was an extensive project which took me almost 2 years, to get to a usable and performing version after multiple rewrites. While not the fastest framework out there, the current version 3.0 is completely usable and gives performance of ~350 requests/sec
+          %sup*
+          \.
+
+        %p.btnWrp.text-center
+          %a.btn.btn-success.btn-disabled.btn-flat.checkInAction{:href => "#", :target => "_blank", :rel => "nofollow", :disabled => ""} Site Coming Soon
+          %a.btn.btn-success.btn-flat.checkCode{:href => "https://github.com/core-framework/core-framework", :target => "_blank", :rel => "nofollow"} Checkout the code
+
+        .infoWrp.row
+          .col-xs-12.col-sm-6.roleWrp
+            %p.title My Role:
+            %p.role
+              PHP
+
+          .col-xs-12.col-sm-6.platformWrp
+            %p.title Platforms:
+            %ul.platforms
+              %li.pull-left.fa.fa-desktop.active
+              %li.pull-left.fa.fa-tablet.active
+              %li.pull-left.fa.fa-mobile.active
+
+    .row
+      .col-sm-12.snapshotWrp
+        .titleWrp.text-center
+          %p.title
+            -#%span Snapshots
+
+            -#.snapshots
+            -#  .row-fluid
+            -#    %img.img-responsive{:src => ""}
+            -#  .row-fluid
+            -#    %img.img-responsive{:src => ""}
+            -#  .row-fluid
+            -#    %img.img-responsive{:src => ""}

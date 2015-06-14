@@ -8,6 +8,16 @@
   <div class='portfolioWrp'>
     <div class='row'>
       <div class='col-xs-12 col-sm-4'>
+        <a class='box' href='/portfolio/coreframework'>
+          <div class='logoWrp'>
+            <div class='brandLogo coreframework'></div>
+          </div>
+          <div class='title'>
+            <p>Core Framework</p>
+          </div>
+        </a>
+      </div>
+      <div class='col-xs-12 col-sm-4'>
         <a class='box' href='/portfolio/being-desi'>
           <div class='logoWrp'>
             <div class='brandLogo being-desi'></div>
@@ -27,6 +37,8 @@
           </div>
         </a>
       </div>
+    </div>
+    <div class='row'>
       <div class='col-xs-12 col-sm-4'>
         <a class='box' href='/portfolio/bluehost'>
           <div class='logoWrp'>
@@ -37,8 +49,6 @@
           </div>
         </a>
       </div>
-    </div>
-    <div class='row'>
       <div class='col-xs-12 col-sm-4'>
         <a class='box' href='/portfolio/bigrock'>
           <div class='logoWrp'>
@@ -59,6 +69,8 @@
           </div>
         </a>
       </div>
+    </div>
+    <div class='row'>
       <div class='col-xs-12 col-sm-4'>
         <a class='box' href='/portfolio/gafbo'>
           <div class='logoWrp'>
@@ -69,8 +81,6 @@
           </div>
         </a>
       </div>
-    </div>
-    <div class='row'>
       <div class='col-xs-12 col-sm-4'>
         <a class='box' href='/portfolio/rod'>
           <div class='logoWrp'>
@@ -88,16 +98,6 @@
           </div>
           <div class='title'>
             <p>HttpX</p>
-          </div>
-        </a>
-      </div>
-      <div class='col-xs-12 col-sm-4'>
-        <a class='box' href='/portfolio/word-up'>
-          <div class='logoWrp'>
-            <div class='brandLogo word-up'></div>
-          </div>
-          <div class='title'>
-            <p>Word-up</p>
           </div>
         </a>
       </div>
@@ -123,10 +123,23 @@
           </div>
         </a>
       </div>
+      <div class='col-xs-12 col-sm-4'>
+        <a class='box' href='/portfolio/word-up'>
+          <div class='logoWrp'>
+            <div class='brandLogo word-up'></div>
+          </div>
+          <div class='title'>
+            <p>Word-up</p>
+          </div>
+        </a>
+      </div>
     </div>
   </div>
 </div>
 <div class='switchWrp' ng-class='{active: animateSubPage}' ng-switch='' on='subPage'>
+  <div class='case' ng-switch-when='coreframework'>
+    <div class='template' ng-include="'templates/partials/coreframework.html'"></div>
+  </div>
   <div class='case' ng-switch-when='being-desi'>
     <div class='template' ng-include="'templates/partials/being-desi.html'"></div>
   </div>
