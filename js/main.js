@@ -8,25 +8,6 @@ var check404 = function ($location) {
 };
 
 
-
-// directives
-portfolioApp.directive('subPages', [function ($animate) {
-    return {
-        restrict: 'E',
-        scope: { includeFile: "=src" },
-        link: function (scope, element, attrs) {
-            if (scope.includeFile !== undefined) {
-
-            }
-        },
-        template: '<div ng-include="includeFile" class="subPageContentWrp" onload="activate(this)" ></div>'
-    }
-}]);
-
-
-
-
-
 // Route Config
 portfolioApp.config(function($routeProvider, $locationProvider){
 
@@ -80,9 +61,18 @@ portfolioApp.config(function($routeProvider, $locationProvider){
 
 // Controllers
 portfolioApp.controller('MasterController', function($rootScope, $scope) {
-    $scope.isCollapsed = true;
-    $scope.isCollapsed2 = true;
-    $scope.animateSubPage = false;
+    //$scope.isCollapsed = true;
+    //$scope.isCollapsed2 = true;
+    //$scope.animateSubPage = false;
+    $rootScope.breakpoints = {
+        screenXsMin: 320,
+        screenXsMax: 480,
+        screenSmMin: 768,
+        screenMdMin: 992,
+        desktopWidth: 1024,
+        screenLgMin: 1220
+    };
+
     $rootScope.pageClass = "";
     $rootScope.headerAnimated = false;
     $rootScope.options = {
@@ -92,7 +82,7 @@ portfolioApp.controller('MasterController', function($rootScope, $scope) {
         lineWidth:10,
         lineCap:'butt',
         animate: {
-            duration: 3000,
+            duration: 2000,
             enabled: true
         },
         easing: 'ease-in'
@@ -137,7 +127,6 @@ portfolioApp.controller('PortfolioController', function($rootScope, $scope) {
 portfolioApp.controller('SubPageController', function($rootScope, $scope, $routeParams) {
     $rootScope.pageClass = "portfolio";
     $rootScope.headerAnimated = true;
-    //$scope.includeFile = $routeParams.subPage !== '' || $routeParams.subPage !== undefined ? 'templates/partials/' + $routeParams.subPage + '.html' : '';
 
     if ($routeParams.subPage !== '' || $routeParams.subPage !== undefined) {
         $scope.animateSubPage = true;

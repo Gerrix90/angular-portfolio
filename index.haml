@@ -6,7 +6,7 @@
   %meta{:name => "viewport", :content => "user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1"}
   %meta{:name => "apple-mobile-web-app-capable", :content => "yes"}
   %meta{:name => "abstract", :content => "Shalom Sam's online protfolio."}
-  %meta{:name => "description", :content => "Hi, I'am Shalom Sam, a web developer based out of Mumbai, India. With wast skillset in both front-end and backend."}
+  %meta{:name => "description", :content => "Hi, I'am Shalom Sam, a web developer based out of Mumbai, India, with vast skillset in both front-end and backend."}
   %meta{:name => "keywords", :content => "Shalom Sam, Shalom, Sam, web developer, web, developer, front-end developer, backend developer, front-end, front, end, back, frontend, backend, front end, back end, back-end, html5, html, css, css3, javascript, jquery, angularjs, backbone, php, mysql, mongodb"}
   %meta{:name => "author", :context => "Shalom Sam"}
   %meta{:name => "google-site-verification", :content => "99kBJ1oR_1cROxAyvAMKJwJ9dadP4erWcMQTS151RB8"}
@@ -46,30 +46,30 @@
 
         .row.introMsgWrp
           .col-md-2.col-xs-2.text-center.visible-md.visible-lg
-            %a{:href => "http://www.facebook.com/shalom.sam", :'ng-class' => "{ 'animated fadeInLeft' : animateImg }"}
+            %a{:href => "http://www.facebook.com/shalom.sam", :'ng-class' => "{ 'animated fadeInLeft' : animateImg }", :target => "_blank"}
               %i.fa.fa-facebook
 
           .col-md-2.col-xs-2.text-center.visible-md.visible-lg
-            %a{:href => "http://www.twitter.com/Shalom_Sam", :'ng-class' => "{ 'animated fadeInLeft' : animateImg }"}
+            %a{:href => "http://www.twitter.com/Shalom_Sam", :'ng-class' => "{ 'animated fadeInLeft' : animateImg }", :target => "_blank"}
               %i.fa.fa-twitter
 
           .col-md-4.col-xs-12.text-center.fname{:'ng-class' => "{ 'animated fadeInUp' : animateImg }"}
             %span Shalom Sam
 
           .col-md-2.col-xs-2.text-center.visible-md.visible-lg
-            %a{:href => "http://www.linkedin.com/shalomsam", :'ng-class' => "{ 'animated fadeInRight' : animateImg }"}
+            %a{:href => "http://www.linkedin.com/shalomsam", :'ng-class' => "{ 'animated fadeInRight' : animateImg }", :target => "_blank"}
               %i.fa.fa-linkedin
 
           .col-md-2.col-xs-2.text-center.visible-md.visible-lg
-            %a{:href => "https://angel.co/shalom-sam", :'ng-class' => "{ 'animated fadeInRight' : animateImg }"}
+            %a{:href => "https://angel.co/shalom-sam", :'ng-class' => "{ 'animated fadeInRight' : animateImg }", :target => "_blank"}
               %i.fa.fa-angellist
 
         .row.socialWrp-xs.visible-xs.visible-sm
           .col-xs-12.text-center
-            %a.fa.fa-facebook{:href => "http://www.facebook.com/shalom.sam", :'ng-class' => "{ 'animated fadeInLeft' : animateImg }"}
-            %a.fa.fa-twitter{:href => "http://www.twitter.com/Shalom_Sam", :'ng-class' => "{ 'animated fadeInLeft' : animateImg }"}
-            %a.fa.fa-linkedin{:href => "https://www.linkedin.com/profile/view?id=55968477", :'ng-class' => "{ 'animated fadeInRight' : animateImg }"}
-            %a.fa.fa-angellist{:href => "https://angel.co/shalom-sam", :'ng-class' => "{ 'animated fadeInRight' : animateImg }"}
+            %a.fa.fa-facebook{:href => "http://www.facebook.com/shalom.sam", :'ng-class' => "{ 'animated fadeInLeft' : animateImg }", :target => "_blank"}
+            %a.fa.fa-twitter{:href => "http://www.twitter.com/Shalom_Sam", :'ng-class' => "{ 'animated fadeInLeft' : animateImg }", :target => "_blank"}
+            %a.fa.fa-linkedin{:href => "https://www.linkedin.com/profile/view?id=55968477", :'ng-class' => "{ 'animated fadeInRight' : animateImg }", :target => "_blank"}
+            %a.fa.fa-angellist{:href => "https://angel.co/shalom-sam", :'ng-class' => "{ 'animated fadeInRight' : animateImg }", :target => "_blank"}
 
       .container-fluid.navbar.navbar-custom.navbar-fixed-bottom.navbar-inverse.nav-wrap.bottom
         .navbar-header
@@ -104,4 +104,4 @@
               %a{:href => "/contact"} CONTACT
 
   .view-animate-container
-    .section-box.view-animate{:"ng-view" => ""}
+    .section-box.view-animate{:"ng-view" => "", :autoscroll => "true"}
