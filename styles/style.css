@@ -710,10 +710,12 @@ body {
       @media screen and (min-width: 320px) and (max-width: 767px) {
         body header .dpWrapper {
           margin-top: 0; } }
+
+
       body header .dpWrapper img {
         width: 36%;
-        border: 10px solid #fff;
-        border-radius: 100%;
+        /* border: 10px solid #fff; */
+        /* border-radius: 100%; */
         max-width: 300px;
         -webkit-animation-delay: 0s;
         -webkit-animation-duration: 1.5s;
